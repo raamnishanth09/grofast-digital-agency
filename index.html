@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Grofast Digital - AI-Driven Digital Marketing Agency. We offer Meta Ads, Google Ads, SEO, Video Editing, Automation & more.">
+  <meta name="keywords" content="digital marketing, AI automation, Meta Ads, Google Ads, SEO, video editing, branding">
+  <title>Grofast Digital | AI-Driven Digital Marketing Agency</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#ba1c16',
+            'primary-dark': '#c70f0f',
+            'gradient-red': '#b91c15',
+          },
+          fontFamily: {
+            'heading': ['Sora', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Sora', sans-serif;
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #000000 0%, #1a0505 25%, #3d0a0a 50%, #1a0505 75%, #000000 100%);
+    }
+
+    .gradient-btn {
+      background: linear-gradient(135deg, #ba1c16, #c70f0f);
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10px);
+      }
+    }
+
+    .animate-bounce-slow {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Hero Image Floating Animation */
+    @keyframes heroFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-15px) rotate(1deg);
+      }
+
+      75% {
+        transform: translateY(-15px) rotate(-1deg);
+      }
+    }
+
+    .hero-float {
+      animation: heroFloat 4s ease-in-out infinite;
+    }
+
+    /* Hero Carousel Styles */
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      pointer-events: none;
+    }
+
+    .hero-slide.active {
+      position: relative;
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    .hero-indicator {
+      cursor: pointer;
+    }
+
+    .hero-indicator.active {
+      background: white;
+      transform: scale(1.3);
+    }
+
+    .hero-indicator:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Brand Scrolling Marquee */
+    .brands-scroll {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .brands-track {
+      display: flex;
+      gap: 40px;
+      animation: scrollLeft 30s linear infinite;
+      width: max-content;
+    }
+
+    .brands-track-reverse {
+      animation: scrollRight 30s linear infinite;
+    }
+
+    .brand-logo {
+      height: 60px;
+      width: 150px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 1;
+      transition: all 0.3s ease;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .brand-logo:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes scrollRight {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Trust Slide Carousel */
+    .trust-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      pointer-events: none;
+    }
+
+    .trust-slide.active {
+      position: relative;
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    .trust-indicator {
+      cursor: pointer;
+    }
+
+    .trust-indicator.active {
+      background: #ba1c16;
+      transform: scale(1.3);
+    }
+
+    .trust-indicator:hover {
+      background: rgba(186, 28, 22, 0.8);
+    }
+
+    /* SVG Path Animation */
+    .trust-path-animate {
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: drawPath 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes drawPath {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+
+  <!-- Floating Social Icons -->
+  <div class="fixed left-5 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50 hidden lg:flex">
+    <a href="#" target="_blank"
+      class="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+      data-social="facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" target="_blank"
+      class="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+      data-social="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" target="_blank"
+      class="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+      data-social="linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" target="_blank"
+      class="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+      data-social="youtube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://wa.me/919159124541" target="_blank"
+      class="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-500 hover:text-white transition-all duration-300 hover:scale-110"
+      data-social="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <!-- Logo Image - Replace src with your logo file -->
+        <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+        <!-- Text Logo (fallback or alongside image) -->
+        <div class="flex flex-col">
+          <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+              class="text-primary">FAST</span></span>
+          <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex items-center gap-8">
+        <li><a href="index.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-100">Home</a>
+        </li>
+        <li><a href="about.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">About
+            Us</a></li>
+        <li><a href="services.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">Services</a>
+        </li>
+        <li><a href="testimonials.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">Testimonials</a>
+        </li>
+        <li><a href="team.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">Team</a>
+        </li>
+        <li><a href="portfolio.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">Portfolio</a>
+        </li>
+        <li><a href="opportunities.html"
+            class="text-white font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all">Opportunities</a>
+        </li>
+        <li><a href="contact.html"
+            class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Contact
+            Us</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+        <span class="w-6 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-6 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-6 h-0.5 bg-white rounded transition-all"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+      <ul class="flex flex-col gap-4">
+        <li><a href="index.html" class="text-white font-medium hover:text-primary">Home</a></li>
+        <li><a href="about.html" class="text-white font-medium hover:text-primary">About Us</a></li>
+        <li><a href="services.html" class="text-white font-medium hover:text-primary">Services</a></li>
+        <li><a href="testimonials.html" class="text-white font-medium hover:text-primary">Testimonials</a></li>
+        <li><a href="team.html" class="text-white font-medium hover:text-primary">Team</a></li>
+        <li><a href="portfolio.html" class="text-white font-medium hover:text-primary">Portfolio</a></li>
+        <li><a href="opportunities.html" class="text-white font-medium hover:text-primary">Opportunities</a></li>
+        <li><a href="contact.html"
+            class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen gradient-hero flex items-center relative overflow-hidden pt-20">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-[20%] left-[20%] w-96 h-96 bg-primary/30 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-[20%] right-[20%] w-80 h-80 bg-primary-dark/20 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 w-full relative z-10">
+      <!-- Full Hero Carousel -->
+      <div id="heroCarousel" class="relative">
+
+        <!-- Slide 1 - Digital Marketing -->
+        <div class="hero-slide active">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="text-center lg:text-left">
+              <span class="inline-block bg-white text-primary px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                � Digital Marketing Services
+              </span>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
+                Boost Your Brand With <span style="color: #e40808;">Digital Marketing</span>
+              </h1>
+              <p class="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto lg:mx-0">
+                Meta Ads, Google Ads, SEO, Video Editing, Graphics Design & more. Drive traffic, generate leads, and
+                grow your business online.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="service-digital-marketing.html"
+                  class="gradient-btn text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                  Explore Services <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="contact.html"
+                  class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+            <!-- Right Image -->
+            <div class="hidden lg:flex justify-center items-center relative">
+              <div class="absolute w-[400px] h-[400px] bg-primary/20 rounded-full blur-[80px]"></div>
+              <div class="relative hero-float">
+                <img src="images/hero section dg.png" alt="Digital Marketing" class="w-full max-w-lg drop-shadow-2xl">
+                <div class="absolute -top-8 -left-8 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-pulse"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-white/20 rounded-full blur-md animate-pulse"
+                  style="animation-delay: 0.5s;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 - Software Marketing -->
+        <div class="hero-slide">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="text-center lg:text-left">
+              <span class="inline-block bg-white text-primary px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                💻 Marketing Software Solutions
+              </span>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
+                Powerful Tools For <span style="color: #e40808;">Business Growth</span>
+              </h1>
+              <p class="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto lg:mx-0">
+                Lead Generation, CRM, Landing Pages, Payment Gateway & more. Streamline your marketing with cutting-edge
+                software solutions.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="service-software.html"
+                  class="gradient-btn text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                  Explore Software <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="contact.html"
+                  class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all">
+                  Get Demo
+                </a>
+              </div>
+            </div>
+            <!-- Right Image -->
+            <div class="hidden lg:flex justify-center items-center relative">
+              <div class="absolute w-[400px] h-[400px] bg-primary/20 rounded-full blur-[80px]"></div>
+              <div class="relative hero-float">
+                <img src="images/herosection software.png" alt="Software Marketing"
+                  class="w-full max-w-lg drop-shadow-2xl">
+                <div class="absolute -top-8 -left-8 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-pulse"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-white/20 rounded-full blur-md animate-pulse"
+                  style="animation-delay: 0.5s;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 - AI Automation -->
+        <div class="hero-slide">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="text-center lg:text-left">
+              <span class="inline-block bg-white text-primary px-5 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                🤖 AI Automation Solutions
+              </span>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
+                Transform With <span style="color: #e40808;">AI Automation</span>
+              </h1>
+              <p class="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto lg:mx-0">
+                Chatbots, Sales Agents, WhatsApp & Instagram Automation. Let AI handle your customer interactions 24/7.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="service-ai.html"
+                  class="gradient-btn text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                  Explore AI <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="contact.html"
+                  class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all">
+                  Get Started
+                </a>
+              </div>
+            </div>
+            <!-- Right Image -->
+            <div class="hidden lg:flex justify-center items-center relative">
+              <div class="absolute w-[400px] h-[400px] bg-primary/20 rounded-full blur-[80px]"></div>
+              <div class="relative hero-float">
+                <img src="images/hero section ai automation.png" alt="AI Automation"
+                  class="w-full max-w-lg drop-shadow-2xl">
+                <div class="absolute -top-8 -left-8 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-pulse"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-white/20 rounded-full blur-md animate-pulse"
+                  style="animation-delay: 0.5s;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div class="flex justify-center gap-3 mt-10">
+        <button class="hero-indicator active w-3 h-3 rounded-full bg-white/50 transition-all" data-slide="0"></button>
+        <button class="hero-indicator w-3 h-3 rounded-full bg-white/50 transition-all" data-slide="1"></button>
+        <button class="hero-indicator w-3 h-3 rounded-full bg-white/50 transition-all" data-slide="2"></button>
+      </div>
+    </div>
+
+    <!-- Scroll Arrow -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+      <a href="#who-we-are" class="flex flex-col items-center text-white text-sm gap-2">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section id="who-we-are" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-primary font-semibold text-sm tracking-widest uppercase">About Us</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-5">Who <span class="text-primary">We Are</span>
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">A team of passionate digital innovators dedicated to
+          transforming businesses through AI-driven marketing solutions.</p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Video Container -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <video id="companyVideo" class="w-full aspect-video" controls autoplay muted loop>
+            <source src="videos/who we are (2).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Text Content -->
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-5">Your Growth Partner in the Digital Age</h3>
+          <p class="text-gray-600 mb-4 text-lg">At Grofast Digital, we believe in the power of innovation. Founded with
+            a vision to democratize digital marketing, we leverage artificial intelligence and automation to deliver
+            exceptional results for businesses of all sizes.</p>
+          <p class="text-gray-600 mb-8 text-lg">From Meta Ads to complete business automation, our comprehensive suite
+            of services is designed to help you scale faster and smarter. We don't just execute campaigns—we build
+            digital ecosystems that drive sustainable growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With GroFast Section - Swiper Carousel -->
+  <section id="why-trust-us"
+    class="why-work-section py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <!-- Animated Looping Line -->
+    <div
+      class="absolute left-0 right-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none opacity-40 hidden md:block">
+      <div class="animate-scroll-line flex" style="width: 200%;">
+        <svg class="w-1/2 h-16" viewBox="0 0 1200 60" fill="none" preserveAspectRatio="none">
+          <path
+            d="M0,30 Q50,10 100,30 T200,30 T300,30 T400,30 T500,30 T600,30 T700,30 T800,30 T900,30 T1000,30 T1100,30 T1200,30"
+            stroke="url(#loopGradient)" stroke-width="2" fill="none" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="loopGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#ba1c16;stop-opacity:0.3" />
+              <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#ba1c16;stop-opacity:0.3" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <svg class="w-1/2 h-16" viewBox="0 0 1200 60" fill="none" preserveAspectRatio="none">
+          <path
+            d="M0,30 Q50,10 100,30 T200,30 T300,30 T400,30 T500,30 T600,30 T700,30 T800,30 T900,30 T1000,30 T1100,30 T1200,30"
+            stroke="url(#loopGradient2)" stroke-width="2" fill="none" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="loopGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#ba1c16;stop-opacity:0.3" />
+              <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#ba1c16;stop-opacity:0.3" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <style>
+      @keyframes scrollLine {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-scroll-line {
+        animation: scrollLine 8s linear infinite;
+      }
+    </style>
+
+    <div class="max-w-7xl mx-auto px-5 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
+          style="font-family: 'Playfair Display', serif;">
+          Why Work With <span class="text-primary">GroFast</span>?
+        </h2>
+      </div>
+
+      <!-- Swiper Carousel -->
+      <div class="swiper whySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 - Results That Matter -->
+          <div class="swiper-slide">
+            <div class="slide-item flex flex-col items-center text-center px-4 py-8">
+              <img src="images/growth-doodlee.png" class="main-img w-[80%] max-w-3xl h-auto mb-8"
+                alt="Results Growth Doodle">
+              <h3 class="slide-title text-3xl md:text-4xl font-bold text-white mb-4">Results That Matter</h3>
+              <p class="slide-text text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                We focus on <span class="text-primary font-semibold">measurable growth</span> — more leads, better
+                engagement and a stronger digital identity.
+              </p>
+              <p class="mt-6 text-gray-400 italic">We're all in. Every step of the way.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 - Smart Digital Strategy -->
+          <div class="swiper-slide">
+            <div class="slide-item flex flex-col items-center text-center px-4 py-8">
+              <img src="images/strategy-doodle (2).png" class="main-img w-[80%] max-w-3xl h-auto mb-8"
+                alt="Strategy Brain Doodle">
+              <h3 class="slide-title text-3xl md:text-4xl font-bold text-white mb-4">Smart Digital Strategy</h3>
+              <p class="slide-text text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                Every project we deliver is backed by <span class="text-primary font-semibold">data-driven
+                  planning</span>, automation tools and marketing psychology.
+              </p>
+              <p class="mt-6 text-gray-400 italic">We're all in. Every step of the way.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 - Creative That Converts -->
+          <div class="swiper-slide">
+            <div class="slide-item flex flex-col items-center text-center px-4 py-8">
+              <img src="images/creative-doodlee.png" class="main-img w-[80%] max-w-3xl h-auto mb-8"
+                alt="Creative Lightbulb Doodle">
+              <h3 class="slide-title text-3xl md:text-4xl font-bold text-white mb-4">Creative That Converts</h3>
+              <p class="slide-text text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                We mix <span class="text-primary font-semibold">modern design</span>, clear messaging and user behavior
+                insights to build experiences that convert.
+              </p>
+              <p class="mt-6 text-gray-400 italic">We're all in. Every step of the way.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Swiper Navigation -->
+        <div
+          class="swiper-button-next !text-primary !w-14 !h-14 !bg-white !rounded-full !shadow-lg after:!text-xl hover:!bg-primary hover:!text-white transition-colors">
+        </div>
+        <div
+          class="swiper-button-prev !text-primary !w-14 !h-14 !bg-white !rounded-full !shadow-lg after:!text-xl hover:!bg-primary hover:!text-white transition-colors">
+        </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination !relative !mt-8"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Swiper CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    .why-work-section .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: #ddd;
+      opacity: 1;
+    }
+
+    .why-work-section .swiper-pagination-bullet-active {
+      background: #ba1c16;
+    }
+
+    .why-work-section .swiper-button-next,
+    .why-work-section .swiper-button-prev {
+      transition: all 0.3s ease;
+    }
+
+    .why-work-section .main-img {
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Swiper(".whySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+      });
+    });
+  </script>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 border-2 border-primary rounded-full"></div>
+      <div class="absolute bottom-10 right-10 w-48 h-48 border-2 border-primary rounded-full"></div>
+      <div class="absolute top-1/2 left-1/4 w-20 h-20 border-2 border-primary rounded-full"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <span class="text-primary font-semibold text-sm tracking-widest uppercase">Our Achievements</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-3">Numbers That <span class="text-primary">Speak</span></h2>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- Stat 1 -->
+        <div
+          class="stat-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group border border-gray-100">
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+            <i class="fas fa-cog text-white text-3xl"></i>
+          </div>
+          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">5+</span>
+          <span class="text-gray-500 text-sm font-medium">Years in the Industry</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div
+          class="stat-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group border border-gray-100">
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+            <i class="fas fa-users text-white text-3xl"></i>
+          </div>
+          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">400+</span>
+          <span class="text-gray-500 text-sm font-medium">Happy Clients</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div
+          class="stat-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group border border-gray-100">
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+            <i class="fas fa-bullseye text-white text-3xl"></i>
+          </div>
+          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">50K+</span>
+          <span class="text-gray-500 text-sm font-medium">Leads Generated</span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div
+          class="stat-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group border border-gray-100">
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+            <i class="fas fa-indian-rupee-sign text-white text-3xl"></i>
+          </div>
+          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">₹20Cr+</span>
+          <span class="text-gray-500 text-sm font-medium">Revenue Generated</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Our Process Section -->
+  <section class="py-24 bg-black relative overflow-hidden">
+    <!-- Background Glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-primary font-semibold text-sm tracking-widest uppercase">Our Process</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 mb-5">How We <span
+            class="text-primary">Work</span></h2>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto">Our proven 5-step methodology ensures every project delivers
+          maximum impact and ROI.</p>
+      </div>
+
+      <!-- Process Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative">
+        <!-- Timeline Line (Desktop) -->
+        <div
+          class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-1 bg-gradient-to-r from-primary via-primary-dark to-primary">
+        </div>
+
+        <!-- Step 1 -->
+        <div class="text-center relative group">
+          <div
+            class="w-20 h-20 gradient-btn rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform relative z-10">
+            <span
+              class="absolute -top-2 -right-2 w-7 h-7 bg-white text-primary rounded-full flex items-center justify-center font-bold text-sm">1</span>
+            <i class="fas fa-user-plus text-white text-2xl"></i>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Onboarding & Discovery</h4>
+          <p class="text-white/50 text-sm">Understanding your business goals and target audience</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center relative group">
+          <div
+            class="w-20 h-20 gradient-btn rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform relative z-10">
+            <span
+              class="absolute -top-2 -right-2 w-7 h-7 bg-white text-primary rounded-full flex items-center justify-center font-bold text-sm">2</span>
+            <i class="fas fa-chart-line text-white text-2xl"></i>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Insight & Planning</h4>
+          <p class="text-white/50 text-sm">Data analysis and strategic roadmap development</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center relative group">
+          <div
+            class="w-20 h-20 gradient-btn rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform relative z-10">
+            <span
+              class="absolute -top-2 -right-2 w-7 h-7 bg-white text-primary rounded-full flex items-center justify-center font-bold text-sm">3</span>
+            <i class="fas fa-bullseye text-white text-2xl"></i>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Strategy & Campaign Design</h4>
+          <p class="text-white/50 text-sm">Crafting tailored solutions for your needs</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center relative group">
+          <div
+            class="w-20 h-20 gradient-btn rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform relative z-10">
+            <span
+              class="absolute -top-2 -right-2 w-7 h-7 bg-white text-primary rounded-full flex items-center justify-center font-bold text-sm">4</span>
+            <i class="fas fa-rocket text-white text-2xl"></i>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Execution & Optimization</h4>
+          <p class="text-white/50 text-sm">Launching campaigns with continuous improvement</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="text-center relative group">
+          <div
+            class="w-20 h-20 gradient-btn rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform relative z-10">
+            <span
+              class="absolute -top-2 -right-2 w-7 h-7 bg-white text-primary rounded-full flex items-center justify-center font-bold text-sm">5</span>
+            <i class="fas fa-chart-bar text-white text-2xl"></i>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Reporting & Growth</h4>
+          <p class="text-white/50 text-sm">Measuring success and scaling results</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do Section - Social Eagle Style -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <!-- Section Header -->
+      <div class="text-center mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+          What Are <span class="text-primary">My Options</span>?
+        </h2>
+      </div>
+      <p class="text-center text-gray-600 text-lg max-w-4xl mx-auto mb-16">
+        At GroFast Digital, we offer comprehensive digital solutions tailored to your needs. Choose the service that
+        best fits your business goals.
+      </p>
+
+      <!-- 4 Cards Flex Grid -->
+      <div class="flex flex-wrap justify-center gap-6">
+
+        <!-- Card 1 - Digital Marketing -->
+        <div
+          class="service-card-hover relative rounded-3xl shadow-xl p-8 pt-16 text-center w-full sm:w-[280px] transition-all duration-300 group">
+          <!-- Top Badge Circle -->
+          <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
+            <div
+              class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-white transition-colors">
+              <i class="fas fa-bullhorn text-primary text-3xl"></i>
+            </div>
+          </div>
+          <!-- Tagline -->
+          <p class="card-tagline text-xs uppercase tracking-wider mb-2">Full-Service Marketing</p>
+          <!-- Title -->
+          <h3 class="card-title text-xl md:text-2xl font-extrabold mb-3 tracking-wide">DIGITAL MARKETING</h3>
+          <!-- Description -->
+          <p class="card-desc text-sm leading-relaxed mb-6">
+            Meta Ads, Google Ads, SEO, Video Editing, Graphics Design & complete campaign management.
+          </p>
+          <!-- Button -->
+          <a href="service-digital-marketing.html"
+            class="card-btn inline-block px-6 py-2.5 border-2 font-semibold rounded-lg text-sm transition-all duration-300">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Card 2 - Influencer Marketing -->
+        <div
+          class="service-card-hover relative rounded-3xl shadow-xl p-8 pt-16 text-center w-full sm:w-[280px] transition-all duration-300 group">
+          <!-- Top Badge Circle -->
+          <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
+            <div
+              class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-white transition-colors">
+              <i class="fas fa-users text-primary text-3xl"></i>
+            </div>
+          </div>
+          <!-- Tagline -->
+          <p class="card-tagline text-xs uppercase tracking-wider mb-2">Brand Amplification</p>
+          <!-- Title -->
+          <h3 class="card-title text-xl md:text-2xl font-extrabold mb-3 tracking-wide">INFLUENCER</h3>
+          <!-- Description -->
+          <p class="card-desc text-sm leading-relaxed mb-6">
+            Partner with top influencers to amplify your brand reach and connect with target audiences.
+          </p>
+          <!-- Button -->
+          <a href="service-influencer.html"
+            class="card-btn inline-block px-6 py-2.5 border-2 font-semibold rounded-lg text-sm transition-all duration-300">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Card 3 - Marketing Software -->
+        <div
+          class="service-card-hover relative rounded-3xl shadow-xl p-8 pt-16 text-center w-full sm:w-[280px] transition-all duration-300 group">
+          <!-- Top Badge Circle -->
+          <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
+            <div
+              class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-white transition-colors">
+              <i class="fas fa-laptop-code text-primary text-3xl"></i>
+            </div>
+          </div>
+          <!-- Tagline -->
+          <p class="card-tagline text-xs uppercase tracking-wider mb-2">All-In-One Tools</p>
+          <!-- Title -->
+          <h3 class="card-title text-xl md:text-2xl font-extrabold mb-3 tracking-wide">SOFTWARE</h3>
+          <!-- Description -->
+          <p class="card-desc text-sm leading-relaxed mb-6">
+            Lead Generation, CRM, Landing Pages, Payment Gateway & business automation tools.
+          </p>
+          <!-- Button -->
+          <a href="service-software.html"
+            class="card-btn inline-block px-6 py-2.5 border-2 font-semibold rounded-lg text-sm transition-all duration-300">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Card 4 - AI Automation -->
+        <div
+          class="service-card-hover relative rounded-3xl shadow-xl p-8 pt-16 text-center w-full sm:w-[280px] transition-all duration-300 group">
+          <!-- Top Badge Circle -->
+          <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
+            <div
+              class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-white transition-colors">
+              <i class="fas fa-robot text-primary text-3xl"></i>
+            </div>
+          </div>
+          <!-- Tagline -->
+          <p class="card-tagline text-xs uppercase tracking-wider mb-2">Smart Automation</p>
+          <!-- Title -->
+          <h3 class="card-title text-xl md:text-2xl font-extrabold mb-3 tracking-wide">AI AUTOMATION</h3>
+          <!-- Description -->
+          <p class="card-desc text-sm leading-relaxed mb-6">
+            Chatbots, Sales Agents, WhatsApp & Instagram Automation for 24/7 business growth.
+          </p>
+          <!-- Button -->
+          <a href="service-ai.html"
+            class="card-btn inline-block px-6 py-2.5 border-2 font-semibold rounded-lg text-sm transition-all duration-300">
+            Get Started
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Custom CSS for hover effect -->
+      <style>
+        .service-card-hover {
+          background: linear-gradient(to bottom right, #ba1c16, #b91c1c);
+        }
+
+        .service-card-hover .card-tagline {
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .service-card-hover .card-title {
+          color: white;
+        }
+
+        .service-card-hover .card-desc {
+          color: rgba(255, 255, 255, 0.8);
+        }
+
+        .service-card-hover .card-btn {
+          border-color: white;
+          color: white;
+        }
+
+        .service-card-hover .card-btn:hover {
+          background: white;
+          color: #ba1c16;
+        }
+
+        /* Hover: White background with black text */
+        .service-card-hover:hover {
+          background: white;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .service-card-hover:hover .card-tagline {
+          color: #9ca3af;
+        }
+
+        .service-card-hover:hover .card-title {
+          color: #111827;
+        }
+
+        .service-card-hover:hover .card-desc {
+          color: #6b7280;
+        }
+
+        .service-card-hover:hover .card-btn {
+          border-color: #111827;
+          color: #111827;
+        }
+
+        .service-card-hover:hover .card-btn:hover {
+          background: #111827;
+          color: white;
+        }
+      </style>
+    </div>
+  </section>
+
+  <!-- Brands We Worked With Section -->
+  <section class="py-16 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 mb-10">
+      <div class="text-center">
+        <span class="text-primary font-semibold text-sm tracking-widest uppercase">Trusted By</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-3">Brands We <span class="text-primary">Worked With</span>
+        </h2>
+        <p class="text-gray-500">50+ brands trust us with their digital growth</p>
+      </div>
+    </div>
+
+    <!-- Scrolling Brands Row 1 -->
+    <div class="brands-scroll mb-6">
+      <div class="brands-track">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/1.png" alt="Brand" class="brand-logo">
+        <img src="images/2.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <!-- Duplicate for seamless loop -->
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+      </div>
+    </div>
+
+    <!-- Scrolling Brands Row 2 (Reverse Direction) -->
+    <div class="brands-scroll brands-scroll-reverse">
+      <div class="brands-track brands-track-reverse">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <!-- Duplicate for seamless loop -->
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="brands-scroll mt-6">
+      <div class="brands-track">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <!-- Duplicate for seamless loop -->
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+        <img src="images/7.png" alt="Brand" class="brand-logo">
+        <img src="images/8.png" alt="Brand" class="brand-logo">
+        <img src="images/9.png" alt="Brand" class="brand-logo">
+        <img src="images/10.png" alt="Brand" class="brand-logo">
+        <img src="images/11.png" alt="Brand" class="brand-logo">
+        <img src="images/12.png" alt="Brand" class="brand-logo">
+        <img src="images/5.png" alt="Brand" class="brand-logo">
+        <img src="images/6.png" alt="Brand" class="brand-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black pt-20 pb-8 text-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-5">
+            <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-10 w-auto rounded-full">
+            <div class="flex flex-col">
+              <span class="text-2xl font-extrabold tracking-wide">GRO<span class="text-primary">FAST</span></span>
+              <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+            </div>
+          </a>
+          <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions and AI-powered
+            marketing strategies.</p>
+          <div class="flex gap-4">
+            <a href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              data-social="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              data-social="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              data-social="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              data-social="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">About Us</a>
+            </li>
+            <li><a href="services.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">Services</a>
+            </li>
+            <li><a href="testimonials.html"
+                class="text-white/60 hover:text-primary hover:pl-1 transition-all">Testimonials</a></li>
+            <li><a href="team.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">Team</a></li>
+            <li><a href="portfolio.html"
+                class="text-white/60 hover:text-primary hover:pl-1 transition-all">Portfolio</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="service-digital-marketing.html"
+                class="text-white/60 hover:text-primary hover:pl-1 transition-all">Digital Marketing</a></li>
+            <li><a href="service-influencer.html"
+                class="text-white/60 hover:text-primary hover:pl-1 transition-all">Influencer Marketing</a></li>
+            <li><a href="service-software.html"
+                class="text-white/60 hover:text-primary hover:pl-1 transition-all">Marketing Software</a></li>
+            <li><a href="service-ai.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">AI
+                Automation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <i class="fas fa-envelope text-primary mt-1"></i>
+              <span class="text-white/60">grofastdigital@gmail.com</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fas fa-phone text-primary mt-1"></i>
+              <span class="text-white/60">+91 9159124541</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+              <span class="text-white/60">Tamil Nadu, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+        <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow-lg');
+        navbar.classList.remove('py-4');
+      } else {
+        navbar.classList.add('py-4');
+        navbar.classList.remove('py-2', 'shadow-lg');
+      }
+    });
+
+    // Video Player (placeholder)
+    function playVideo() {
+      alert('Video player placeholder - Add your video embed here');
+    }
+
+    // Social Media Links (editable)
+    const socialLinks = {
+      facebook: 'https://www.facebook.com/profile.php?id=61563493814910',
+      instagram: 'https://www.instagram.com/grofast_digital/',
+      linkedin: 'https://linkedin.com/company/grofastdigital',
+      youtube: 'https://youtube.com/@grofastdigital',
+      whatsapp: 'https://wa.me/919159124541'
+    };
+
+    document.querySelectorAll('[data-social]').forEach(link => {
+      const platform = link.getAttribute('data-social');
+      if (socialLinks[platform]) {
+        link.href = socialLinks[platform];
+      }
+    });
+
+    // Hero Carousel Auto-Scroll
+    (function () {
+      const slides = document.querySelectorAll('.hero-slide');
+      const indicators = document.querySelectorAll('.hero-indicator');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      const autoScrollInterval = 2000; // 2 seconds
+
+      function goToSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        const next = (currentSlide + 1) % totalSlides;
+        goToSlide(next);
+      }
+
+      // Auto-scroll
+      let autoScroll = setInterval(nextSlide, autoScrollInterval);
+
+      // Click on indicators
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          clearInterval(autoScroll);
+          goToSlide(index);
+          autoScroll = setInterval(nextSlide, autoScrollInterval);
+        });
+      });
+
+      // Pause on hover
+      const carousel = document.getElementById('heroCarousel');
+      if (carousel) {
+        carousel.addEventListener('mouseenter', () => {
+          clearInterval(autoScroll);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+          autoScroll = setInterval(nextSlide, autoScrollInterval);
+        });
+      }
+    })();
+  </script>
+
+  <!-- Popup Form -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-container">
+      <button class="popup-close" onclick="closePopup()">&times;</button>
+      <div class="popup-content">
+        <div class="popup-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3 class="popup-title">Ready to <span class="text-primary">Grow</span> Your Business?</h3>
+        <p class="popup-subtitle">Get a FREE consultation with our digital marketing experts!</p>
+        <form class="popup-form" onsubmit="submitPopupForm(event)">
+          <div class="popup-input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="popup-input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="popup-input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <button type="submit" class="popup-submit">
+            Get Free Consultation <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+        <p class="popup-footer">🔒 Your information is safe with us</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Popup Styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup-container {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 100%);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      transform: scale(0.8) translateY(50px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 25px 80px rgba(186, 28, 22, 0.3);
+      border: 1px solid rgba(186, 28, 22, 0.3);
+    }
+
+    .popup-overlay.active .popup-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-close:hover {
+      background: #ba1c16;
+      transform: rotate(90deg);
+    }
+
+    .popup-content {
+      text-align: center;
+    }
+
+    .popup-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ba1c16, #c70f0f);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      animation: pulse-icon 2s infinite;
+    }
+
+    .popup-icon i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    @keyframes pulse-icon {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(186, 28, 22, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 20px rgba(186, 28, 22, 0);
+      }
+    }
+
+    .popup-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .popup-input-group {
+      position: relative;
+    }
+
+    .popup-input-group i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ba1c16;
+      font-size: 1rem;
+    }
+
+    .popup-input-group input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.75rem;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .popup-input-group input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .popup-input-group input:focus {
+      outline: none;
+      border-color: #ba1c16;
+      background: rgba(186, 28, 22, 0.1);
+    }
+
+    .popup-submit {
+      background: linear-gradient(135deg, #ba1c16, #c70f0f);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .popup-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(186, 28, 22, 0.4);
+    }
+
+    .popup-footer {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <script>
+    // Popup Functions
+    function showPopup() {
+      const overlay = document.getElementById('popupOverlay');
+      if (overlay) {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closePopup() {
+      const overlay = document.getElementById('popupOverlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        // Remember that user closed the popup (don't show for 24 hours)
+        localStorage.setItem('popupClosed', Date.now());
+      }
+    }
+
+    function submitPopupForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('.popup-submit');
+      const name = form.name.value;
+      const phone = form.phone.value;
+      const email = form.email.value;
+
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+      submitBtn.disabled = true;
+
+      // Google Sheets Web App URL
+      const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwhkYtQuHg9Rk0vZwz3H3G0dJQ7i2-mPdT2jBw7bDk9xIIWJ1yAhOwmdBJEZcpGPUow/exec';
+
+      // Send to Google Sheets
+      fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          name: name,
+          phone: phone,
+          email: email,
+          timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+          source: 'Website Popup'
+        })
+      })
+        .then(() => {
+          // Success
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Thank You!';
+          submitBtn.style.background = '#22c55e';
+          setTimeout(() => {
+            closePopup();
+            localStorage.setItem('popupSubmitted', 'true');
+          }, 1500);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Still show success (no-cors doesn't return response)
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Thank You!';
+          submitBtn.style.background = '#22c55e';
+          setTimeout(() => {
+            closePopup();
+            localStorage.setItem('popupSubmitted', 'true');
+          }, 1500);
+        });
+    }
+
+    // Show popup after 3 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(showPopup, 3000);
+    });
+
+    // Close popup when clicking outside
+    document.getElementById('popupOverlay').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closePopup();
+      }
+    });
+  </script>
+</body>
+
+</html>

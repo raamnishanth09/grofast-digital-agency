@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join Grofast Digital - Explore exciting job opportunities and internship programs in digital marketing, AI automation, and creative solutions.">
+    <meta name="keywords"
+        content="careers, jobs, internship, digital marketing jobs, AI internship, Grofast Digital careers">
+    <title>Opportunities - Jobs & Internships | Grofast Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ba1c16',
+                        'primary-dark': '#c70f0f',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #000000 0%, #b91c15 100%);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(186, 28, 22, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(186, 28, 22, 0.6);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .job-card:hover .job-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+                            class="text-primary">FAST</span></span>
+                    <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                </div>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="index.html" class="text-white font-medium hover:text-primary transition-colors">Home</a>
+                </li>
+                <li><a href="about.html" class="text-white font-medium hover:text-primary transition-colors">About
+                        Us</a></li>
+                <li><a href="services.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Services</a></li>
+                <li><a href="testimonials.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium hover:text-primary transition-colors">Team</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="opportunities.html" class="text-primary font-medium">Opportunities</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg">Contact Us</a>
+                </li>
+            </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+            <ul class="flex flex-col gap-4">
+                <li><a href="index.html" class="text-white font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white font-medium">About Us</a></li>
+                <li><a href="services.html" class="text-white font-medium">Services</a></li>
+                <li><a href="testimonials.html" class="text-white font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium">Team</a></li>
+                <li><a href="portfolio.html" class="text-white font-medium">Portfolio</a></li>
+                <li><a href="opportunities.html" class="text-primary font-medium">Opportunities</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section
+        class="min-h-[60vh] gradient-hero flex items-center justify-center text-center pt-24 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-[20%] left-[20%] w-96 h-96 bg-primary/30 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[20%] right-[20%] w-80 h-80 bg-primary-dark/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-4xl px-5 relative z-10">
+            <span
+                class="inline-block bg-white text-primary px-5 py-2 rounded-full text-sm font-bold mb-6 animate-float shadow-lg">
+                🚀 Build Your Future With Us
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Career <span class="text-red-300">Opportunities</span>
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                Join our dynamic team and be part of the digital revolution. We're looking for passionate individuals to
+                shape the future of marketing.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#jobs"
+                    class="gradient-btn text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                    View Jobs <i class="fas fa-briefcase"></i>
+                </a>
+                <a href="#internships"
+                    class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all inline-flex items-center justify-center gap-2">
+                    Internships <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Why Grofast Digital</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-5">Why Work <span class="text-primary">With Us?</span>
+                </h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Experience a workplace that values innovation,
+                    growth, and work-life balance.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div
+                    class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-rocket text-primary text-2xl group-hover:text-white transition-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fast Growth</h3>
+                    <p class="text-gray-500">Accelerate your career with hands-on experience in cutting-edge
+                        technologies</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div
+                    class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-lightbulb text-primary text-2xl group-hover:text-white transition-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation First</h3>
+                    <p class="text-gray-500">Work with AI, automation, and the latest digital marketing tools</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div
+                    class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-users text-primary text-2xl group-hover:text-white transition-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Great Team</h3>
+                    <p class="text-gray-500">Collaborate with passionate professionals who support your success</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div
+                    class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-laptop-house text-primary text-2xl group-hover:text-white transition-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Work</h3>
+                    <p class="text-gray-500">Enjoy work-life balance with flexible schedules and remote options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Openings Section -->
+    <section id="jobs" class="py-20 bg-black relative overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Full-Time Positions</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 mb-5">Job <span
+                        class="text-primary">Openings</span></h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">Build your career with us. Join our team of experts
+                    and make an impact in the digital world.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Job 1: Digital Marketing Executive -->
+                <div
+                    class="job-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all group">
+                    <div class="flex items-start gap-5">
+                        <div
+                            class="job-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform">
+                            <i class="fas fa-bullhorn text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-xl font-bold text-white">Digital Marketing Executive</h3>
+                                <span
+                                    class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full font-semibold">Hiring</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-map-marker-alt text-primary"></i> Tamil Nadu</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-clock text-primary"></i> Full-Time</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-briefcase text-primary"></i> 1-2 Years Exp</span>
+                            </div>
+                            <p class="text-white/60 text-sm mb-5">Execute and manage digital marketing campaigns across
+                                Meta, Google, and other platforms. Drive results through data-driven strategies.</p>
+                            <ul class="text-white/50 text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Meta &
+                                    Google Ads Management</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Campaign
+                                    Analytics & Reporting</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Client
+                                    Communication</li>
+                            </ul>
+                            <a href="#apply-form"
+                                class="gradient-btn inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-sm">
+                                Apply Now <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2: Video Editor -->
+                <div
+                    class="job-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all group">
+                    <div class="flex items-start gap-5">
+                        <div
+                            class="job-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform">
+                            <i class="fas fa-video text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-xl font-bold text-white">Video Editor</h3>
+                                <span
+                                    class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full font-semibold">Hiring</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-map-marker-alt text-primary"></i> Tamil Nadu</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-clock text-primary"></i> Full-Time</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-briefcase text-primary"></i> 0-2 Years Exp</span>
+                            </div>
+                            <p class="text-white/60 text-sm mb-5">Create engaging video content for social media,
+                                advertisements, and promotional campaigns. Transform raw footage into compelling
+                                stories.</p>
+                            <ul class="text-white/50 text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Adobe
+                                    Premiere Pro / After Effects</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Social
+                                    Media Content Creation</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Motion
+                                    Graphics Skills</li>
+                            </ul>
+                            <a href="#apply-form"
+                                class="gradient-btn inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-sm">
+                                Apply Now <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3: Graphic Designer -->
+                <div
+                    class="job-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all group">
+                    <div class="flex items-start gap-5">
+                        <div
+                            class="job-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-xl font-bold text-white">Graphic Designer</h3>
+                                <span
+                                    class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full font-semibold">Hiring</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-map-marker-alt text-primary"></i> Tamil Nadu</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-clock text-primary"></i> Full-Time</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-briefcase text-primary"></i> 1-3 Years Exp</span>
+                            </div>
+                            <p class="text-white/60 text-sm mb-5">Design stunning visuals for brands, social media, and
+                                marketing campaigns. Create visual identities that captivate audiences.</p>
+                            <ul class="text-white/50 text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Adobe
+                                    Creative Suite Proficiency</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Brand
+                                    Identity Design</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Social
+                                    Media Graphics</li>
+                            </ul>
+                            <a href="#apply-form"
+                                class="gradient-btn inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-sm">
+                                Apply Now <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 4: AI Solutions Developer -->
+                <div
+                    class="job-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all group">
+                    <div class="flex items-start gap-5">
+                        <div
+                            class="job-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-xl font-bold text-white">AI Solutions Developer</h3>
+                                <span
+                                    class="bg-yellow-500/20 text-yellow-400 text-xs px-3 py-1 rounded-full font-semibold">Coming
+                                    Soon</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-map-marker-alt text-primary"></i> Remote / Tamil Nadu</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-clock text-primary"></i> Full-Time</span>
+                                <span class="flex items-center gap-1 text-white/50 text-sm"><i
+                                        class="fas fa-briefcase text-primary"></i> 2-4 Years Exp</span>
+                            </div>
+                            <p class="text-white/60 text-sm mb-5">Develop AI-powered solutions including chatbots,
+                                automation systems, and intelligent marketing tools for our clients.</p>
+                            <ul class="text-white/50 text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Python /
+                                    AI Frameworks</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Chatbot
+                                    Development</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> API
+                                    Integrations</li>
+                            </ul>
+                            <a href="#apply-form"
+                                class="gradient-btn inline-flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-sm">
+                                Express Interest <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internships" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Learn & Grow</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-5">Internship <span
+                        class="text-primary">Programs</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Kickstart your career with real-world experience.
+                    Learn from industry experts and build your portfolio.</p>
+            </div>
+
+            <!-- Internship Benefits -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-white text-lg"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Certificate of Completion</h4>
+                    <p class="text-gray-500 text-sm">Receive an official certificate upon successful completion</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-white text-lg"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Mentorship</h4>
+                    <p class="text-gray-500 text-sm">Get guidance from experienced professionals</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-project-diagram text-white text-lg"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Real Projects</h4>
+                    <p class="text-gray-500 text-sm">Work on live client projects and build your portfolio</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Internship 1: Digital Marketing -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all group relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-bullhorn text-primary text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Digital Marketing Intern</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded font-medium">3-6 months</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-5">Learn Meta Ads, Google Ads, SEO, and campaign management</p>
+                    <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Campaign Creation
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Analytics Tools
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Client Projects
+                        </li>
+                    </ul>
+                    <a href="#apply-form"
+                        class="text-primary font-semibold inline-flex items-center gap-2 text-sm group-hover:gap-3 transition-all">
+                        Apply <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Internship 2: Content Writing -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all group relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-pen-fancy text-primary text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Content Writing Intern</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded font-medium">3-6 months</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-5">Create compelling content for blogs, social media, and ads</p>
+                    <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Blog Writing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Ad Copywriting
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> SEO Content</li>
+                    </ul>
+                    <a href="#apply-form"
+                        class="text-primary font-semibold inline-flex items-center gap-2 text-sm group-hover:gap-3 transition-all">
+                        Apply <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Internship 3: Social Media -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all group relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-share-alt text-primary text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Social Media Intern</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded font-medium">3-6 months</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-5">Manage social media accounts and grow online communities</p>
+                    <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Account Management
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Content Planning
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Engagement
+                            Strategy</li>
+                    </ul>
+                    <a href="#apply-form"
+                        class="text-primary font-semibold inline-flex items-center gap-2 text-sm group-hover:gap-3 transition-all">
+                        Apply <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Internship 4: Web Development -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all group relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-code text-primary text-xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Web Development Intern</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded font-medium">3-6 months</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-5">Build websites and landing pages for client projects</p>
+                    <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> HTML/CSS/JS</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Responsive Design
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> WordPress</li>
+                    </ul>
+                    <a href="#apply-form"
+                        class="text-primary font-semibold inline-flex items-center gap-2 text-sm group-hover:gap-3 transition-all">
+                        Apply <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]">
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">How To Apply</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3 mb-5">Application <span
+                        class="text-primary">Process</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center relative">
+                    <div
+                        class="w-16 h-16 gradient-btn rounded-full flex items-center justify-center mx-auto mb-5 pulse-glow">
+                        <span class="text-white font-bold text-xl">1</span>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Choose a Role</h4>
+                    <p class="text-white/50 text-sm">Browse our openings and find your perfect fit</p>
+                    <!-- Arrow -->
+                    <div
+                        class="hidden md:block absolute top-8 left-[70%] w-[60%] h-0.5 bg-gradient-to-r from-primary to-transparent">
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center relative">
+                    <div class="w-16 h-16 gradient-btn rounded-full flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-bold text-xl">2</span>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Submit Application</h4>
+                    <p class="text-white/50 text-sm">Send your resume through our contact form</p>
+                    <div
+                        class="hidden md:block absolute top-8 left-[70%] w-[60%] h-0.5 bg-gradient-to-r from-primary to-transparent">
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center relative">
+                    <div class="w-16 h-16 gradient-btn rounded-full flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-bold text-xl">3</span>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Interview</h4>
+                    <p class="text-white/50 text-sm">Meet our team and showcase your skills</p>
+                    <div
+                        class="hidden md:block absolute top-8 left-[70%] w-[60%] h-0.5 bg-gradient-to-r from-primary to-transparent">
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 gradient-btn rounded-full flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">Join the Team</h4>
+                    <p class="text-white/50 text-sm">Welcome aboard! Start your journey with us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply-form" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Apply Now</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-5">Submit Your <span
+                        class="text-primary">Application</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Fill out the form below to apply for a job or
+                    internship position. We'll get back to you soon!</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-10">
+                <iframe src="https://admin.grofastdigital.com/widget/form/69365dac0ed9e"
+                    style="width:100%;height:600px;border:none;border-radius:3px" id="inline-69365dac0ed9e"
+                    data-form-name="Internship and Job" data-layout-iframe-id="inline-69365dac0ed9e"
+                    data-form-id="69365dac0ed9e" data-height="600" title="Internship and Job">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-black/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5">Ready to Start Your Journey?</h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Don't see a perfect match? We're always looking for
+                talented individuals. Reach out and let's explore opportunities together.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#apply-form"
+                    class="bg-white text-primary px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                    Apply Now <i class="fas fa-paper-plane"></i>
+                </a>
+                <a href="https://wa.me/919159124541" target="_blank"
+                    class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2">
+                    WhatsApp Us <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-5">
+                        <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-10 w-auto rounded-full">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-extrabold tracking-wide">GRO<span
+                                    class="text-primary">FAST</span></span>
+                            <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven
+                                Digital</span>
+                        </div>
+                    </a>
+                    <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            data-social="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            data-social="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            data-social="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            data-social="youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/60 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-white/60 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="team.html" class="text-white/60 hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="opportunities.html"
+                                class="text-white/60 hover:text-primary transition-colors">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="service-digital-marketing.html"
+                                class="text-white/60 hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="service-influencer.html"
+                                class="text-white/60 hover:text-primary transition-colors">Influencer Marketing</a></li>
+                        <li><a href="service-software.html"
+                                class="text-white/60 hover:text-primary transition-colors">Marketing Software</a></li>
+                        <li><a href="service-ai.html" class="text-white/60 hover:text-primary transition-colors">AI
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><span
+                                class="text-white/60">grofastdigital@gmail.com</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><span
+                                class="text-white/60">+91 9159124541</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
+                                class="text-white/60">Tamil Nadu, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // Social Media Links
+        const socialLinks = {
+            facebook: 'https://www.facebook.com/profile.php?id=61563493814910',
+            instagram: 'https://www.instagram.com/grofast_digital/',
+            linkedin: 'https://linkedin.com/company/grofastdigital',
+            youtube: 'https://youtube.com/@grofastdigital',
+            whatsapp: 'https://wa.me/919159124541'
+        };
+
+        document.querySelectorAll('[data-social]').forEach(link => {
+            const platform = link.getAttribute('data-social');
+            if (socialLinks[platform]) {
+                link.href = socialLinks[platform];
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Grofast Digital Marketing Software - All-in-one platform for coaches and service businesses. Funnels, CRM, Automation, LMS, WhatsApp & more.">
+    <title>Marketing Software | Grofast Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ba1c16',
+                        'primary-dark': '#c70f0f',
+                        'dark': '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+        }
+
+        .gradient-card {
+            background: linear-gradient(135deg, rgba(186, 28, 22, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 60px rgba(186, 28, 22, 0.3);
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-20px)
+            }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(186, 28, 22, 0.4)
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(186, 28, 22, 0.8)
+            }
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+                            class="text-primary">FAST</span></span>
+                    <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                </div>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="index.html" class="text-white font-medium hover:text-primary transition-colors">Home</a>
+                </li>
+                <li><a href="about.html" class="text-white font-medium hover:text-primary transition-colors">About</a>
+                </li>
+                <li><a href="services.html" class="text-primary font-medium">Services</a></li>
+                <li><a href="testimonials.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium hover:text-primary transition-colors">Team</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg">Contact Us</a>
+                </li>
+            </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+            <ul class="flex flex-col gap-4">
+                <li><a href="index.html" class="text-white font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white font-medium">About Us</a></li>
+                <li><a href="services.html" class="text-primary font-medium">Services</a></li>
+                <li><a href="testimonials.html" class="text-white font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium">Team</a></li>
+                <li><a href="portfolio.html" class="text-white font-medium">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen gradient-hero flex items-center relative overflow-hidden pt-24">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-[30%] right-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[150px]">
+            </div>
+            <div class="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px]">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span
+                    class="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/30">
+                    🚀 Coach with clarity and control
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Build a Profitable, Scalable Coaching Business on <span class="text-primary">Autopilot</span>
+                </h1>
+                <p class="text-white/70 text-lg mb-8 leading-relaxed">
+                    Plug in modern automation, AI-assisted sales systems, and a simple dashboard so you can focus on
+                    coaching while the backend handles leads, follow-ups, and payments.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                    <a href="contact.html"
+                        class="gradient-btn text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2 pulse-glow">
+                        Book a Free Strategy Call <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#features"
+                        class="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all inline-flex items-center justify-center gap-2">
+                        Watch a 5-Min Demo <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <p class="text-white/50 text-sm flex items-center gap-2">
+                    <i class="fas fa-check-circle text-primary"></i>
+                    No tech headache, no big team needed. Just one simple system running your coaching business.
+                </p>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="relative">
+                    <div
+                        class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-primary/30 to-transparent rounded-full flex items-center justify-center glow-red float-animation">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-primary/20 to-dark rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-8xl md:text-9xl text-primary/80"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 animate-bounce">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-0 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20"
+                        style="animation: float 4s ease-in-out infinite 1s;">
+                        <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 right-0 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20"
+                        style="animation: float 5s ease-in-out infinite 0.5s;">
+                        <i class="fas fa-envelope text-primary text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section id="features" class="py-24 bg-dark relative">
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[200px]">
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">All Your Growth Tools in One
+                    Simple Platform</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">Everything You Need to Attract,
+                    Nurture, and <span class="text-primary">Close Clients</span></h2>
+                <p class="text-white/60 text-lg max-w-3xl mx-auto">Stop juggling 10 different apps for funnels, leads,
+                    WhatsApp, payments, and courses. Our all-in-one system brings everything under one roof, built
+                    specially for coaches and service business owners.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-layer-group text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Funnel & Website Builder</h3>
+                    <p class="text-white/60">Build high-converting landing pages, webinar funnels, and lead capture
+                        pages from proven templates.</p>
+                </div>
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-users-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">CRM & Pipeline</h3>
+                    <p class="text-white/60">Capture every enquiry from ads, WhatsApp, website into one clean CRM with
+                        task tracking.</p>
+                </div>
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Automation, Email & WhatsApp</h3>
+                    <p class="text-white/60">Design powerful automation flows that send messages at the right time
+                        automatically.</p>
+                </div>
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">LMS & Community</h3>
+                    <p class="text-white/60">Host courses, coaching programs, and resources in a central learning space
+                        with mobile app.</p>
+                </div>
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sales & Finance</h3>
+                    <p class="text-white/60">Track revenue, manage invoices, and monitor monthly revenue without
+                        spreadsheets.</p>
+                </div>
+                <div
+                    class="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group">
+                    <div
+                        class="feature-icon w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mb-6 transition-transform">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analytics & Dashboards</h3>
+                    <p class="text-white/60">See leads, calls booked, sales closed, and revenue at a glance with
+                        actionable insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Sections -->
+    <!-- Funnel Builder -->
+    <section class="py-20 bg-gradient-to-b from-dark to-black">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-primary font-semibold text-sm tracking-widest uppercase">Funnel & Website
+                        Builder</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Launch High-Converting Funnels in a <span
+                            class="text-primary">Few Clicks</span></h2>
+                    <p class="text-white/70 text-lg mb-6">Build landing pages, webinar funnels, and lead capture pages
+                        from proven templates. Drag, drop, and go live without touching code, while built-in analytics
+                        show you exactly which pages are bringing you leads and revenue.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> 100+ Ready-to-use Templates</li>
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> Drag & Drop Visual Editor</li>
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> Built-in Analytics & A/B Testing</li>
+                    </ul>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 glow-red">
+                        <i class="fas fa-desktop text-8xl text-primary/60"></i>
+                        <div class="mt-4 space-y-2">
+                            <div class="h-3 bg-primary/30 rounded w-full"></div>
+                            <div class="h-3 bg-white/20 rounded w-3/4"></div>
+                            <div class="h-3 bg-white/10 rounded w-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRM -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative flex justify-center">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-primary/20 rounded-xl p-4 text-center"><i
+                                    class="fas fa-user text-primary text-2xl"></i>
+                                <p class="text-xs mt-2 text-white/60">Leads</p>
+                            </div>
+                            <div class="bg-green-500/20 rounded-xl p-4 text-center"><i
+                                    class="fas fa-handshake text-green-500 text-2xl"></i>
+                                <p class="text-xs mt-2 text-white/60">Deals</p>
+                            </div>
+                            <div class="bg-blue-500/20 rounded-xl p-4 text-center"><i
+                                    class="fas fa-tasks text-blue-500 text-2xl"></i>
+                                <p class="text-xs mt-2 text-white/60">Tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <span class="text-primary font-semibold text-sm tracking-widest uppercase">Smart CRM</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Never Lose a <span class="text-primary">Lead
+                            Again</span></h2>
+                    <p class="text-white/70 text-lg mb-6">Capture every enquiry from ads, WhatsApp, website, and calls
+                        into one clean CRM. Assign tasks, track conversations, add notes, and see exactly where each
+                        lead is in your pipeline.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> Unified Lead Inbox</li>
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> Custom Pipeline Stages</li>
+                        <li class="flex items-center gap-3 text-white/70"><i
+                                class="fas fa-check-circle text-primary"></i> Team Task Assignment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation -->
+    <section class="py-20 bg-gradient-to-b from-black to-dark">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-primary font-semibold text-sm tracking-widest uppercase">Automation, Email &
+                        WhatsApp</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Set Up Your Follow-Ups Once and Let Them <span
+                            class="text-primary">Run</span></h2>
+                    <p class="text-white/70 text-lg mb-6">Design powerful automation flows that send WhatsApp messages,
+                        emails, and reminders at the right time. Nurture cold leads, confirm bookings, send payment
+                        links, and follow up on missed calls automatically.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/70"><i class="fab fa-whatsapp text-green-500"></i>
+                            WhatsApp Automation</li>
+                        <li class="flex items-center gap-3 text-white/70"><i class="fas fa-envelope text-primary"></i>
+                            Email Sequences</li>
+                        <li class="flex items-center gap-3 text-white/70"><i class="fas fa-bell text-yellow-500"></i>
+                            Smart Reminders</li>
+                    </ul>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center"><i
+                                    class="fas fa-play text-white"></i></div>
+                            <div class="h-1 bg-primary/50 flex-1"></div>
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center"><i
+                                    class="fab fa-whatsapp text-white"></i></div>
+                            <div class="h-1 bg-green-500/50 flex-1"></div>
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center"><i
+                                    class="fas fa-envelope text-white"></i></div>
+                        </div>
+                        <p class="text-center text-white/50 text-sm">Visual Workflow Builder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="py-20 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]">
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Clarity. Control. Consistent
+                    Results.</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">A Dashboard That Shows You the <span
+                        class="text-primary">Real Story</span> of Your Business</h2>
+                <p class="text-white/60 text-lg max-w-3xl mx-auto">See leads, calls booked, sales closed, and revenue at
+                    a glance. Understand exactly which campaigns are working, where leads are dropping off, and what to
+                    fix next.</p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                    <div class="text-center p-4 bg-white/5 rounded-xl">
+                        <p class="text-3xl font-bold text-primary">2,458</p>
+                        <p class="text-white/50 text-sm">Total Leads</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/5 rounded-xl">
+                        <p class="text-3xl font-bold text-green-500">342</p>
+                        <p class="text-white/50 text-sm">Calls Booked</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/5 rounded-xl">
+                        <p class="text-3xl font-bold text-blue-500">156</p>
+                        <p class="text-white/50 text-sm">Sales Closed</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/5 rounded-xl">
+                        <p class="text-3xl font-bold text-yellow-500">₹15.2L</p>
+                        <p class="text-white/50 text-sm">Revenue</p>
+                    </div>
+                </div>
+                <div
+                    class="h-32 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 rounded-xl flex items-end justify-around p-4">
+                    <div class="w-8 bg-primary/60 rounded-t" style="height:40%"></div>
+                    <div class="w-8 bg-primary/60 rounded-t" style="height:60%"></div>
+                    <div class="w-8 bg-primary/60 rounded-t" style="height:80%"></div>
+                    <div class="w-8 bg-primary rounded-t" style="height:100%"></div>
+                    <div class="w-8 bg-primary/60 rounded-t" style="height:70%"></div>
+                    <div class="w-8 bg-primary/60 rounded-t" style="height:50%"></div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="contact.html"
+                    class="gradient-btn text-white px-10 py-4 rounded-full font-semibold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+                    Book a Call to See It Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold">More <span class="text-primary">Powerful Tools</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-graduation-cap text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">LMS & Community</h3>
+                    <p class="text-white/60 text-sm">Deliver your programs in a clean student portal with progress
+                        tracking and mobile app access.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-store text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Shop Builder</h3>
+                    <p class="text-white/60 text-sm">Create a simple store for your digital products with built-in
+                        upsell options.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fab fa-whatsapp text-green-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">WhatsApp Tools</h3>
+                    <p class="text-white/60 text-sm">Send personalised broadcasts and connect WhatsApp Cloud API for
+                        scalable messaging.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-envelope-open-text text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Email Marketing</h3>
+                    <p class="text-white/60 text-sm">Send emails that actually get read with segmentation and automated
+                        sequences.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-mobile-alt text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Mobile App</h3>
+                    <p class="text-white/60 text-sm">Run your business from your phone - check leads, reply to chats,
+                        track sales anywhere.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-ad text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Ad Launcher</h3>
+                    <p class="text-white/60 text-sm">Launch and monitor your ads from one dashboard with performance
+                        tracking.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-palette text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">White Label</h3>
+                    <p class="text-white/60 text-sm">Put everything under your brand with custom domain, logo, and
+                        colours.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-user-shield text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Team Access</h3>
+                    <p class="text-white/60 text-sm">Add your team with custom permissions while you stay fully in
+                        control.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all">
+                    <i class="fas fa-file-invoice-dollar text-primary text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Sales & Finance</h3>
+                    <p class="text-white/60 text-sm">Track revenue, invoices, and cash flow in one place without
+                        spreadsheets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-gradient-to-b from-black to-dark relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[200px]">
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Our Plans</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">Choose a Plan That Matches Your <span
+                        class="text-primary">Coaching Stage</span></h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">Whether you're just systemising your coaching
+                    business or scaling to a full team, pick a plan that fits your goals.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Growth Plan -->
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-primary/50 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Growth Plan</h3>
+                    <p class="text-white/50 text-sm mb-4">For Service Businesses</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">₹4,999</span>
+                        <span class="text-white/50">/ month</span>
+                    </div>
+                    <p class="text-white/60 text-sm mb-6">Ideal for service providers who want to organise leads,
+                        automate basic follow-ups, and track revenue.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Funnel & Website Builder</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> CRM & Pipeline</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> WhatsApp Campaigns</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Basic Automations</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Email (up to 2,000 contacts)</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Team Access (up to 5)</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center bg-white/10 border border-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary hover:border-primary transition-all">Get
+                        Growth Plan</a>
+                </div>
+                <!-- Impact Plan -->
+                <div
+                    class="bg-gradient-to-b from-primary/20 to-white/5 backdrop-blur-sm border-2 border-primary rounded-3xl p-8 relative transform scale-105">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular</div>
+                    <h3 class="text-xl font-bold mb-2">Impact Plan</h3>
+                    <p class="text-white/50 text-sm mb-4">For Coaches & Consultants</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">₹6,999</span>
+                        <span class="text-white/50">/ month</span>
+                    </div>
+                    <p class="text-white/60 text-sm mb-6">Complete system to attract, nurture, and convert ideal clients
+                        consistently.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Everything in Growth</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Advanced Workflows</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Email (up to 10,000/mo)</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Unlimited Pipelines</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> LMS & Student Portal</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Branded Mobile App</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center gradient-btn text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition-all">Get
+                        Impact Plan</a>
+                </div>
+                <!-- White Label -->
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-primary/50 transition-all">
+                    <h3 class="text-xl font-bold mb-2">White Label Suite</h3>
+                    <p class="text-white/50 text-sm mb-4">For Agencies & Brands</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-primary">Custom</span>
+                        <span class="text-white/50">/ yearly</span>
+                    </div>
+                    <p class="text-white/60 text-sm mb-6">Fully branded platform under your own domain and identity.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> White Label Domain</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Your Logo & Colours</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> All Growth & Impact</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Unlimited Staff & Clients</li>
+                        <li class="flex items-center gap-3 text-white/70 text-sm"><i
+                                class="fas fa-check text-primary"></i> Priority Support</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center bg-white/10 border border-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary hover:border-primary transition-all">Talk
+                        to Our Team</a>
+                </div>
+            </div>
+            <p class="text-center text-white/40 text-sm mt-8">All prices are inclusive of taxes. Talk to our team for
+                custom payment options and add-ons.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Build a Coaching Business
+                That Runs Smoothly?</h2>
+            <p class="text-white/80 text-lg mb-8">Reach out by WhatsApp or email and we'll walk you through how the
+                system can be customised for your business model, offers, and team.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="contact.html"
+                    class="bg-white text-primary px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-envelope"></i> grofastdigital@gmail.com
+                </a>
+                <a href="https://wa.me/919159124541" target="_blank"
+                    class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> +91 9159124541
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-5">
+                        <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-10 w-auto rounded-full">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-extrabold tracking-wide">GRO<span
+                                    class="text-primary">FAST</span></span>
+                            <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven
+                                Digital</span>
+                        </div>
+                    </a>
+                    <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions and
+                        AI-powered marketing.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/60 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-white/60 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="service-digital-marketing.html"
+                                class="text-white/60 hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="service-influencer.html"
+                                class="text-white/60 hover:text-primary transition-colors">Influencer Marketing</a></li>
+                        <li><a href="service-software.html" class="text-primary">Marketing Software</a></li>
+                        <li><a href="service-ai.html" class="text-white/60 hover:text-primary transition-colors">AI
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><span
+                                class="text-white/60">grofastdigital@gmail.com</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><span
+                                class="text-white/60">+91 9159124541</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
+                                class="text-white/60">Tamil Nadu, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | <a href="#" class="hover:text-primary">Privacy
+                        Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    </script>
+</body>
+
+</html>

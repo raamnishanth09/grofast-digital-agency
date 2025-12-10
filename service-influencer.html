@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Influencer Marketing Services - Partner with top influencers to amplify your brand reach with Grofast Digital.">
+    <title>Influencer Marketing | Grofast Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ba1c16',
+                        'primary-dark': '#c70f0f',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #000000 0%, #b91c15 100%);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+                            class="text-primary">FAST</span></span>
+                    <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                </div>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="index.html" class="text-white font-medium hover:text-primary transition-colors">Home</a>
+                </li>
+                <li><a href="about.html" class="text-white font-medium hover:text-primary transition-colors">About
+                        Us</a></li>
+                <li><a href="services.html" class="text-primary font-medium">Services</a></li>
+                <li><a href="testimonials.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium hover:text-primary transition-colors">Team</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg">Contact Us</a>
+                </li>
+            </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+            <ul class="flex flex-col gap-4">
+                <li><a href="index.html" class="text-white font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white font-medium">About Us</a></li>
+                <li><a href="services.html" class="text-primary font-medium">Services</a></li>
+                <li><a href="testimonials.html" class="text-white font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium">Team</a></li>
+                <li><a href="portfolio.html" class="text-white font-medium">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="min-h-[50vh] gradient-hero flex items-center justify-center text-center pt-24">
+        <div class="max-w-4xl px-5">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Influencer <span
+                    class="text-primary">Marketing</span></h1>
+            <p class="text-white/80 text-lg">Partner with top creators to amplify your brand's reach</p>
+        </div>
+    </section>
+
+    <!-- Service Detail -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Our Network</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-5">Connect With <span class="text-primary">Top
+                        Influencers</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Leverage our exclusive network of influencers to
+                    create authentic brand partnerships that drive engagement and conversions.</p>
+            </div>
+
+            <!-- Featured Influencers -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <!-- KuttyKarthi Vlog -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all text-center">
+                    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-5">
+                        <img src="images/kutty karthi vlog.jpg" alt="KuttyKarthi Vlog"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">KuttyKarthi Vlog</h3>
+                    <p class="text-gray-500 mb-4">Popular vlogger with massive following and high engagement rates</p>
+                    <span class="text-primary font-bold">65K+ Followers</span>
+                </div>
+
+                <!-- Masala Unlimit -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all text-center">
+                    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-5">
+                        <img src="images/masala unlimit Logo.webp" alt="Masala Unlimit"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Masala Unlimit</h3>
+                    <p class="text-gray-500 mb-4">Food and lifestyle content creator with dedicated audience</p>
+                    <span class="text-primary font-bold">1M+ Followers</span>
+                </div>
+
+                <!-- A2Z Automobiles -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all text-center">
+                    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-5">
+                        <img src="images/a2z automobiles.jpg" alt="A2Z Automobiles" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">A2Z Automobiles</h3>
+                    <p class="text-gray-500 mb-4">Automotive expert with in-depth reviews and car enthusiast community
+                    </p>
+                    <span class="text-primary font-bold">3K+ Followers</span>
+                </div>
+
+                <!-- Grofast Digital -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all text-center">
+                    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-5">
+                        <img src="images/logo-new.jpg" alt="Grofast Digital" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Grofast Digital</h3>
+                    <p class="text-gray-500 mb-4">Our own digital presence for marketing and tech content</p>
+                    <span class="text-primary font-bold">Growing Network</span>
+                </div>
+            </div>
+
+            <!-- What We Offer - Dark Theme with Alternating Timeline -->
+            <div class="bg-black rounded-3xl p-8 md:p-12 lg:p-16 mt-16 relative overflow-hidden">
+                <!-- Background Glow -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none">
+                </div>
+
+                <div class="text-center mb-12 relative z-10">
+                    <span class="text-primary font-semibold text-sm tracking-widest uppercase">Our Services</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mt-3">What We <span
+                            class="text-primary">Offer</span></h3>
+                </div>
+
+                <!-- Alternating Timeline - Fixed Grid Layout -->
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Center Vertical Line -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20 hidden md:block">
+                    </div>
+
+                    <!-- Item 1 - LEFT side -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] gap-4 mb-12 items-center">
+                        <div
+                            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group md:text-right">
+                            <h4 class="font-bold text-xl text-white mb-2 group-hover:text-primary transition-colors">
+                                Influencer Identification & Matching</h4>
+                            <p class="text-white/60 text-sm">We find the perfect influencers that align with your brand
+                                values, target audience, and campaign objectives.</p>
+                        </div>
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="w-14 h-14 gradient-btn rounded-full flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-110 transition-transform z-10">
+                                <i class="fas fa-search text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- Item 2 - RIGHT side -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] gap-4 mb-12 items-center">
+                        <div class="hidden md:block"></div>
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="w-14 h-14 gradient-btn rounded-full flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-110 transition-transform z-10">
+                                <i class="fas fa-bullseye text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group">
+                            <h4 class="font-bold text-xl text-white mb-2 group-hover:text-primary transition-colors">
+                                Campaign Strategy & Planning</h4>
+                            <p class="text-white/60 text-sm">End-to-end campaign strategy including content briefs,
+                                timelines, and KPI definitions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 - LEFT side -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] gap-4 mb-12 items-center">
+                        <div
+                            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group md:text-right">
+                            <h4 class="font-bold text-xl text-white mb-2 group-hover:text-primary transition-colors">
+                                Content Collaboration</h4>
+                            <p class="text-white/60 text-sm">Creative content development in collaboration with
+                                influencers for authentic brand storytelling.</p>
+                        </div>
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="w-14 h-14 gradient-btn rounded-full flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-110 transition-transform z-10">
+                                <i class="fas fa-handshake text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- Item 4 - RIGHT side -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] gap-4 mb-12 items-center">
+                        <div class="hidden md:block"></div>
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="w-14 h-14 gradient-btn rounded-full flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-110 transition-transform z-10">
+                                <i class="fas fa-chart-line text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group">
+                            <h4 class="font-bold text-xl text-white mb-2 group-hover:text-primary transition-colors">
+                                Performance Tracking & Reporting</h4>
+                            <p class="text-white/60 text-sm">Comprehensive analytics and ROI measurement for every
+                                influencer campaign.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 - LEFT side -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] gap-4 items-center">
+                        <div
+                            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group md:text-right">
+                            <h4 class="font-bold text-xl text-white mb-2 group-hover:text-primary transition-colors">
+                                Long-term Ambassador Programs</h4>
+                            <p class="text-white/60 text-sm">Build lasting relationships with brand ambassadors who
+                                become authentic advocates for your brand.</p>
+                        </div>
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="w-14 h-14 gradient-btn rounded-full flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-110 transition-transform z-10">
+                                <i class="fas fa-crown text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-white/10 relative z-10">
+                    <div class="text-center">
+                        <span class="block text-3xl md:text-4xl font-extrabold text-primary">50+</span>
+                        <span class="text-white/50 text-sm">Influencers</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl md:text-4xl font-extrabold text-primary">1M+</span>
+                        <span class="text-white/50 text-sm">Total Reach</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl md:text-4xl font-extrabold text-primary">100+</span>
+                        <span class="text-white/50 text-sm">Campaigns</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl md:text-4xl font-extrabold text-primary">95%</span>
+                        <span class="text-white/50 text-sm">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html"
+                    class="gradient-btn text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                    Start Your Influencer Campaign
+                </a>
+                <a href="services.html"
+                    class="bg-gray-100 text-gray-800 px-10 py-4 rounded-full font-semibold hover:bg-gray-200 transition-all">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex flex-col mb-5">
+                        <span class="text-2xl font-extrabold tracking-wide">GRO<span
+                                class="text-primary">FAST</span></span>
+                        <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                    </a>
+                    <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/60 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-white/60 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="team.html" class="text-white/60 hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="service-digital-marketing.html"
+                                class="text-white/60 hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="service-influencer.html"
+                                class="text-white/60 hover:text-primary transition-colors">Influencer Marketing</a></li>
+                        <li><a href="service-software.html"
+                                class="text-white/60 hover:text-primary transition-colors">Marketing Software</a></li>
+                        <li><a href="service-ai.html" class="text-white/60 hover:text-primary transition-colors">AI
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><span
+                                class="text-white/60">grofastdigital@gmail.com</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><span
+                                class="text-white/60">+91 9159124541</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
+                                class="text-white/60">Tamil Nadu, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

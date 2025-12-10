@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Client Testimonials - See what our clients say about Grofast Digital's digital marketing and AI automation services.">
+    <title>Testimonials | Grofast Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ba1c16',
+                        'primary-dark': '#c70f0f',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #000000 0%, #b91c15 100%);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+                            class="text-primary">FAST</span></span>
+                    <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                </div>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="index.html" class="text-white font-medium hover:text-primary transition-colors">Home</a>
+                </li>
+                <li><a href="about.html" class="text-white font-medium hover:text-primary transition-colors">About
+                        Us</a></li>
+                <li><a href="services.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Services</a></li>
+                <li><a href="testimonials.html" class="text-primary font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium hover:text-primary transition-colors">Team</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg">Contact Us</a>
+                </li>
+            </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+            <ul class="flex flex-col gap-4">
+                <li><a href="index.html" class="text-white font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white font-medium">About Us</a></li>
+                <li><a href="services.html" class="text-white font-medium">Services</a></li>
+                <li><a href="testimonials.html" class="text-primary font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium">Team</a></li>
+                <li><a href="portfolio.html" class="text-white font-medium">Portfolio</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="min-h-[50vh] gradient-hero flex items-center justify-center text-center pt-24">
+        <div class="max-w-4xl px-5">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Client <span
+                    class="text-primary">Testimonials</span></h1>
+            <p class="text-white/80 text-lg">Hear what our clients have to say about working with us</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Success Stories</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-5">What Our <span class="text-primary">Clients
+                        Say</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Real results from real businesses. See how we've
+                    helped our clients achieve their goals.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"Grofast Digital transformed our online presence
+                        completely. Their Meta Ads campaigns delivered 3x ROI within the first month. The team is
+                        incredibly responsive and truly understands digital marketing."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            RK</div>
+                        <div>
+                            <h5 class="font-bold">Rajesh Kumar</h5>
+                            <span class="text-gray-500 text-sm">Restaurant Owner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"The AI automation solutions provided by Grofast have
+                        saved us countless hours. Their WhatsApp automation handles customer queries 24/7 and has
+                        improved our response time significantly."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            PS</div>
+                        <div>
+                            <h5 class="font-bold">Priya Sharma</h5>
+                            <span class="text-gray-500 text-sm">E-commerce Business</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"Working with Grofast's influencer marketing team was a
+                        game-changer for our brand. They connected us with the right influencers and our brand
+                        visibility increased dramatically."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            AM</div>
+                        <div>
+                            <h5 class="font-bold">Arun Mohan</h5>
+                            <span class="text-gray-500 text-sm">Fashion Brand</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"The CRM solution and lead management system has
+                        streamlined our entire sales process. We now track every lead efficiently and our conversion
+                        rates have improved by 40%."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            VN</div>
+                        <div>
+                            <h5 class="font-bold">Vijay Narayanan</h5>
+                            <span class="text-gray-500 text-sm">Real Estate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"Their video production team is exceptional! The
+                        advertisement shoot with drone coverage made our property listings stand out. Professional
+                        quality at competitive prices."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            SK</div>
+                        <div>
+                            <h5 class="font-bold">Sunitha Krishnan</h5>
+                            <span class="text-gray-500 text-sm">Property Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-gray-50 rounded-2xl p-8 relative">
+                    <div class="absolute top-4 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+                    <p class="text-gray-600 mb-6 relative z-10">"Grofast built our entire digital ecosystem - from
+                        website to automation. Their one-stop solution approach saved us time and money. Highly
+                        recommend their services!"</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 gradient-btn rounded-full flex items-center justify-center text-white font-bold">
+                            KR</div>
+                        <div>
+                            <h5 class="font-bold">Karthik Rajan</h5>
+                            <span class="text-gray-500 text-sm">Tech Startup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Video Testimonials</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3">Watch Their <span class="text-primary">Stories</span>
+                </h2>
+            </div>
+
+            <!-- Reels Style Grid - 5 columns -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Video 1 - Image Testimonial -->
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div class="aspect-[9/16] overflow-hidden">
+                        <img src="videos/port 1.jpg" alt="Client Testimonial"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div class="aspect-[9/16]">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="videos/port 2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div class="aspect-[9/16]">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="videos/port 3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div class="aspect-[9/16]">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="videos/port 4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div class="aspect-[9/16]">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="videos/port 5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-hero">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">Ready to Be Our Next Success Story?</h2>
+            <p class="text-white/80 text-lg mb-8">Join the growing list of businesses that have transformed with Grofast
+                Digital.</p>
+            <a href="contact.html"
+                class="gradient-btn inline-flex items-center gap-2 text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border-2 border-white/20">
+                Start Your Journey <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex flex-col mb-5">
+                        <span class="text-2xl font-extrabold tracking-wide">GRO<span
+                                class="text-primary">FAST</span></span>
+                        <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                    </a>
+                    <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/60 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-white/60 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="team.html" class="text-white/60 hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="service-digital-marketing.html"
+                                class="text-white/60 hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="service-influencer.html"
+                                class="text-white/60 hover:text-primary transition-colors">Influencer Marketing</a></li>
+                        <li><a href="service-software.html"
+                                class="text-white/60 hover:text-primary transition-colors">Marketing Software</a></li>
+                        <li><a href="service-ai.html" class="text-white/60 hover:text-primary transition-colors">AI
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><span
+                                class="text-white/60">grofastdigital@gmail.com</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><span
+                                class="text-white/60">+91 9159124541</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
+                                class="text-white/60">Tamil Nadu, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
