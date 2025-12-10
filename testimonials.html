@@ -230,7 +230,7 @@
     </section>
 
     <!-- Video Testimonials -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-5">
             <div class="text-center mb-16">
                 <span class="text-primary font-semibold text-sm tracking-widest uppercase">Video Testimonials</span>
@@ -238,53 +238,145 @@
                 </h2>
             </div>
 
-            <!-- Reels Style Grid - 5 columns -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                <!-- Video 1 - Image Testimonial -->
-                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-                    <div class="aspect-[9/16] overflow-hidden">
-                        <img src="videos/port 1.jpg" alt="Client Testimonial"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                </div>
+            <!-- Auto-Scrolling Video Carousel -->
+            <div class="relative">
+                <div class="video-carousel-container overflow-hidden">
+                    <div class="video-carousel flex gap-4 animate-scroll" id="videoCarousel">
+                        <!-- Video 1 - Image Testimonial -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16] overflow-hidden">
+                                <img src="videos/port 1.jpg" alt="Client Testimonial"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
 
-                <!-- Video 2 -->
-                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-                    <div class="aspect-[9/16]">
-                        <video class="w-full h-full object-cover" controls>
-                            <source src="videos/port 2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+                        <!-- Video 2 -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
 
-                <!-- Video 3 -->
-                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-                    <div class="aspect-[9/16]">
-                        <video class="w-full h-full object-cover" controls>
-                            <source src="videos/port 3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+                        <!-- Video 3 -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
 
-                <!-- Video 4 -->
-                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-                    <div class="aspect-[9/16]">
-                        <video class="w-full h-full object-cover" controls>
-                            <source src="videos/port 4.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+                        <!-- Video 4 -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
 
-                <!-- Video 5 -->
-                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-                    <div class="aspect-[9/16]">
-                        <video class="w-full h-full object-cover" controls>
-                            <source src="videos/port 5.mp4" type="video/mp4">
-                        </video>
+                        <!-- Video 5 -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Duplicates for seamless loop -->
+                        <!-- Video 1 - Image Testimonial Duplicate -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16] overflow-hidden">
+                                <img src="videos/port 1.jpg" alt="Client Testimonial"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Video 2 Duplicate -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 Duplicate -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Video 4 Duplicate -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Video 5 Duplicate -->
+                        <div
+                            class="video-item flex-shrink-0 w-[200px] md:w-[240px] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="aspect-[9/16]">
+                                <video class="testimonial-video w-full h-full object-cover" muted loop playsinline>
+                                    <source src="videos/port 5.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <style>
+            @keyframes scrollCarousel {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-scroll {
+                animation: scrollCarousel 30s linear infinite;
+            }
+
+            .video-carousel:hover {
+                animation-play-state: paused;
+            }
+
+            .video-item:hover video {
+                transform: scale(1.05);
+            }
+
+            .video-item {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .video-item:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+        </style>
     </section>
 
     <!-- CTA Section -->
@@ -375,6 +467,78 @@
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         }
+
+        // Auto-play videos when visible
+        document.addEventListener('DOMContentLoaded', function () {
+            const videos = document.querySelectorAll('.testimonial-video');
+
+            // Play all videos on load (muted, so autoplay is allowed)
+            videos.forEach(video => {
+                video.play().catch(e => console.log('Autoplay prevented:', e));
+            });
+
+            // Click to unmute and play with sound
+            videos.forEach(video => {
+                // Add click indicator overlay
+                const parent = video.closest('.video-item');
+                if (parent && !parent.querySelector('.sound-indicator')) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'sound-indicator absolute bottom-4 right-4 bg-black/70 text-white px-3 py-2 rounded-full text-xs flex items-center gap-2 cursor-pointer z-10';
+                    indicator.innerHTML = '<i class="fas fa-volume-mute"></i> Tap for sound';
+                    parent.style.position = 'relative';
+                    parent.appendChild(indicator);
+                }
+
+                video.addEventListener('click', function () {
+                    // Mute all other videos first
+                    videos.forEach(v => {
+                        if (v !== video) {
+                            v.muted = true;
+                            const otherIndicator = v.closest('.video-item')?.querySelector('.sound-indicator');
+                            if (otherIndicator) {
+                                otherIndicator.innerHTML = '<i class="fas fa-volume-mute"></i> Tap for sound';
+                            }
+                        }
+                    });
+
+                    // Toggle mute on clicked video
+                    if (video.muted) {
+                        video.muted = false;
+                        video.currentTime = 0; // Restart video
+                        video.play();
+                        const indicator = parent?.querySelector('.sound-indicator');
+                        if (indicator) {
+                            indicator.innerHTML = '<i class="fas fa-volume-up"></i> Playing';
+                        }
+                    } else {
+                        video.muted = true;
+                        const indicator = parent?.querySelector('.sound-indicator');
+                        if (indicator) {
+                            indicator.innerHTML = '<i class="fas fa-volume-mute"></i> Tap for sound';
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for play/pause based on visibility
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play().catch(e => { });
+                    } else {
+                        entry.target.pause();
+                        // Mute when out of view
+                        entry.target.muted = true;
+                        const indicator = entry.target.closest('.video-item')?.querySelector('.sound-indicator');
+                        if (indicator) {
+                            indicator.innerHTML = '<i class="fas fa-volume-mute"></i> Tap for sound';
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            videos.forEach(video => observer.observe(video));
+        });
     </script>
 </body>
 

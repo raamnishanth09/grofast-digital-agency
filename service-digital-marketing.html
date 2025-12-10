@@ -328,6 +328,124 @@
         </div>
     </section>
 
+    <!-- Brands We Worked With Section -->
+    <section class="py-16 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-5 mb-10">
+            <div class="text-center">
+                <span class="text-primary font-semibold text-sm tracking-widest uppercase">Trusted By</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-3">Brands We <span class="text-primary">Worked
+                        With</span>
+                </h2>
+                <p class="text-gray-500">50+ brands trust us with their digital growth</p>
+            </div>
+        </div>
+
+        <!-- Scrolling Brands Row 1 -->
+        <div class="brands-scroll mb-6">
+            <div class="brands-track">
+                <img src="images/1.png" alt="Brand" class="brand-logo">
+                <img src="images/2.png" alt="Brand" class="brand-logo">
+                <img src="images/5.png" alt="Brand" class="brand-logo">
+                <img src="images/6.png" alt="Brand" class="brand-logo">
+                <img src="images/7.png" alt="Brand" class="brand-logo">
+                <img src="images/8.png" alt="Brand" class="brand-logo">
+                <img src="images/9.png" alt="Brand" class="brand-logo">
+                <img src="images/10.png" alt="Brand" class="brand-logo">
+                <img src="images/11.png" alt="Brand" class="brand-logo">
+                <img src="images/12.png" alt="Brand" class="brand-logo">
+                <!-- Duplicate for seamless loop -->
+                <img src="images/1.png" alt="Brand" class="brand-logo">
+                <img src="images/2.png" alt="Brand" class="brand-logo">
+                <img src="images/5.png" alt="Brand" class="brand-logo">
+                <img src="images/6.png" alt="Brand" class="brand-logo">
+                <img src="images/7.png" alt="Brand" class="brand-logo">
+                <img src="images/8.png" alt="Brand" class="brand-logo">
+                <img src="images/9.png" alt="Brand" class="brand-logo">
+                <img src="images/10.png" alt="Brand" class="brand-logo">
+                <img src="images/11.png" alt="Brand" class="brand-logo">
+                <img src="images/12.png" alt="Brand" class="brand-logo">
+            </div>
+        </div>
+
+        <!-- Scrolling Brands Row 2 (Reverse Direction) -->
+        <div class="brands-scroll brands-scroll-reverse">
+            <div class="brands-track brands-track-reverse">
+                <img src="images/9.png" alt="Brand" class="brand-logo">
+                <img src="images/10.png" alt="Brand" class="brand-logo">
+                <img src="images/11.png" alt="Brand" class="brand-logo">
+                <img src="images/12.png" alt="Brand" class="brand-logo">
+                <img src="images/5.png" alt="Brand" class="brand-logo">
+                <img src="images/6.png" alt="Brand" class="brand-logo">
+                <img src="images/7.png" alt="Brand" class="brand-logo">
+                <img src="images/8.png" alt="Brand" class="brand-logo">
+                <!-- Duplicate for seamless loop -->
+                <img src="images/9.png" alt="Brand" class="brand-logo">
+                <img src="images/10.png" alt="Brand" class="brand-logo">
+                <img src="images/11.png" alt="Brand" class="brand-logo">
+                <img src="images/12.png" alt="Brand" class="brand-logo">
+                <img src="images/5.png" alt="Brand" class="brand-logo">
+                <img src="images/6.png" alt="Brand" class="brand-logo">
+                <img src="images/7.png" alt="Brand" class="brand-logo">
+                <img src="images/8.png" alt="Brand" class="brand-logo">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Brands Scroll Animation */
+        .brands-scroll {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .brands-track {
+            display: flex;
+            gap: 30px;
+            animation: scrollLeft 30s linear infinite;
+            width: max-content;
+        }
+
+        .brands-track-reverse {
+            animation: scrollRight 30s linear infinite;
+        }
+
+        .brand-logo {
+            height: 60px;
+            width: 150px;
+            object-fit: contain;
+            flex-shrink: 0;
+            opacity: 1;
+            transition: all 0.3s ease;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+
     <!-- Footer -->
     <footer class="bg-black pt-20 pb-8 text-white">
         <div class="max-w-7xl mx-auto px-5">
