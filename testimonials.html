@@ -232,15 +232,26 @@
     <!-- Video Testimonials -->
     <section class="py-20 bg-gray-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10">
                 <span class="text-primary font-semibold text-sm tracking-widest uppercase">Video Testimonials</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-3">Watch Their <span class="text-primary">Stories</span>
                 </h2>
             </div>
 
-            <!-- Auto-Scrolling Video Carousel -->
+            <!-- Auto-Scrolling Video Carousel with Manual Controls -->
             <div class="relative">
-                <div class="video-carousel-container overflow-hidden">
+                <!-- Navigation Buttons -->
+                <button onclick="scrollCarouselLeft()"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-dark transition-all flex items-center justify-center -ml-2 md:-ml-6">
+                    <i class="fas fa-chevron-left text-lg"></i>
+                </button>
+                <button onclick="scrollCarouselRight()"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-dark transition-all flex items-center justify-center -mr-2 md:-mr-6">
+                    <i class="fas fa-chevron-right text-lg"></i>
+                </button>
+
+                <div class="video-carousel-container overflow-x-auto scroll-smooth scrollbar-hide"
+                    id="carouselContainer" style="scrollbar-width: none; -ms-overflow-style: none;">
                     <div class="video-carousel flex gap-4 animate-scroll" id="videoCarousel">
                         <!-- Video 1 - Image Testimonial -->
                         <div
@@ -357,11 +368,17 @@
             }
 
             .animate-scroll {
-                animation: scrollCarousel 30s linear infinite;
+                animation: scrollCarousel 15s linear infinite;
             }
 
-            .video-carousel:hover {
+            .video-carousel-container:hover .animate-scroll,
+            .video-carousel-container:focus-within .animate-scroll {
                 animation-play-state: paused;
+            }
+
+            /* Hide scrollbar but allow scroll */
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
             }
 
             .video-item:hover video {
@@ -375,6 +392,13 @@
             .video-item:hover {
                 transform: translateY(-8px);
                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Mobile touch scroll */
+            @media (max-width: 768px) {
+                .animate-scroll {
+                    animation: scrollCarousel 12s linear infinite;
+                }
             }
         </style>
     </section>
@@ -539,6 +563,69 @@
 
             videos.forEach(video => observer.observe(video));
         });
+
+        // Manual Scroll Functions
+        function scrollCarouselLeft() {
+            const container = document.getElementById('carouselContainer');
+            if (container) {
+                container.scrollBy({ left: -260, behavior: 'smooth' });
+            }
+        }
+
+        function scrollCarouselRight() {
+            const container = document.getElementById('carouselContainer');
+            if (container) {
+                container.scrollBy({ left: 260, behavior: 'smooth' });
+            }
+        }
+
+        // Enable touch/drag scroll
+        (function () {
+            const carousel = document.getElementById('videoCarousel');
+            const container = document.getElementById('carouselContainer');
+            if (!carousel || !container) return;
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.style.animationPlayState = 'paused';
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                setTimeout(() => {
+                    carousel.style.animationPlayState = 'running';
+                }, 3000);
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                container.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch events for mobile
+            container.addEventListener('touchstart', () => {
+                carousel.style.animationPlayState = 'paused';
+            });
+
+            container.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    carousel.style.animationPlayState = 'running';
+                }, 3000);
+            });
+        })();
     </script>
 </body>
 
