@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Privacy Policy for Grofast Digital - Learn how we collect, use, and protect your personal information.">
+    <title>Privacy Policy | Grofast Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ba1c16',
+                        'primary-dark': '#c70f0f',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #000000 0%, #b91c15 100%);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+        }
+
+        .policy-section {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-left: 4px solid #ba1c16;
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .policy-section:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(186, 28, 22, 0.1);
+        }
+
+        .policy-section::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #ba1c16, #c70f0f);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .policy-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ba1c16, #c70f0f);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .policy-icon i {
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .toc-item {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .toc-item:hover {
+            background: #fef2f2;
+            border-color: #ba1c16;
+            transform: translateX(4px);
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[1000] bg-black/95 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo-new.jpg" alt="Grofast Digital Logo" class="h-12 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-wide text-white">GRO<span
+                            class="text-primary">FAST</span></span>
+                    <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                </div>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="index.html" class="text-white font-medium hover:text-primary transition-colors">Home</a>
+                </li>
+                <li><a href="about.html" class="text-white font-medium hover:text-primary transition-colors">About
+                        Us</a></li>
+                <li><a href="services.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Services</a></li>
+                <li><a href="testimonials.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium hover:text-primary transition-colors">Team</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="opportunities.html"
+                        class="text-white font-medium hover:text-primary transition-colors">Opportunities</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn text-white px-7 py-3 rounded-full font-semibold shadow-lg">Contact Us</a>
+                </li>
+            </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+                <span class="w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-black px-5 py-6">
+            <ul class="flex flex-col gap-4">
+                <li><a href="index.html" class="text-white font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white font-medium">About Us</a></li>
+                <li><a href="services.html" class="text-white font-medium">Services</a></li>
+                <li><a href="testimonials.html" class="text-white font-medium">Testimonials</a></li>
+                <li><a href="team.html" class="text-white font-medium">Team</a></li>
+                <li><a href="portfolio.html" class="text-white font-medium">Portfolio</a></li>
+                <li><a href="opportunities.html" class="text-white font-medium">Opportunities</a></li>
+                <li><a href="contact.html"
+                        class="gradient-btn inline-block text-white px-7 py-3 rounded-full font-semibold text-center">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section
+        class="min-h-[50vh] gradient-hero flex items-center justify-center text-center pt-24 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-[20%] left-[10%] w-64 h-64 bg-white/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[20%] right-[10%] w-80 h-80 bg-primary/20 rounded-full blur-[100px]"></div>
+        </div>
+        <div class="max-w-4xl px-5 relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                <i class="fas fa-shield-halved text-white"></i>
+                <span class="text-white/90 text-sm font-medium">Your Privacy Matters</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Privacy <span
+                    class="text-primary">Policy</span></h1>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">We are committed to protecting your personal information
+                and your right to privacy. Learn how we collect, use, and safeguard your data.</p>
+            <p class="text-white/60 text-sm mt-4"><i class="far fa-calendar-alt mr-2"></i>Last Updated: December 16,
+                2025</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid lg:grid-cols-[300px_1fr] gap-12">
+
+                <!-- Sticky Table of Contents -->
+                <aside class="lg:sticky lg:top-28 lg:h-fit">
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <i class="fas fa-list-ul text-primary"></i>
+                            Quick Navigation
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#information-collected" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-database mr-2 text-xs"></i>Information We Collect
+                            </a>
+                            <a href="#how-we-use" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-cogs mr-2 text-xs"></i>How We Use Your Info
+                            </a>
+                            <a href="#information-sharing" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-share-nodes mr-2 text-xs"></i>Information Sharing
+                            </a>
+                            <a href="#data-security" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-lock mr-2 text-xs"></i>Data Security
+                            </a>
+                            <a href="#cookies" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-cookie-bite mr-2 text-xs"></i>Cookies & Tracking
+                            </a>
+                            <a href="#your-rights" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-user-shield mr-2 text-xs"></i>Your Rights
+                            </a>
+                            <a href="#third-party" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-external-link-alt mr-2 text-xs"></i>Third-Party Links
+                            </a>
+                            <a href="#changes" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-edit mr-2 text-xs"></i>Policy Changes
+                            </a>
+                            <a href="#contact" class="toc-item block text-gray-600 hover:text-primary">
+                                <i class="fas fa-envelope mr-2 text-xs"></i>Contact Us
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Policy Content -->
+                <main class="space-y-8">
+                    <!-- Introduction -->
+                    <div
+                        class="bg-gradient-to-r from-primary/5 to-transparent p-8 rounded-2xl border border-primary/10">
+                        <h2 class="text-2xl font-bold mb-4">Welcome to Grofast Digital</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            At Grofast Digital, we respect your privacy and are committed to protecting your personal
+                            data. This privacy policy explains how we collect, use, disclose, and safeguard your
+                            information when you visit our website or use our digital marketing services. Please read
+                            this policy carefully to understand our practices regarding your personal data.
+                        </p>
+                    </div>
+
+                    <!-- Section 1: Information We Collect -->
+                    <div id="information-collected" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">1. Information We Collect</h3>
+                                    <p class="text-gray-600 mb-4">We may collect the following types of information:</p>
+
+                                    <div class="space-y-4">
+                                        <div class="bg-white p-4 rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-primary mb-2"><i
+                                                    class="fas fa-user mr-2"></i>Personal Information</h4>
+                                            <ul class="text-gray-600 space-y-2 ml-6 list-disc">
+                                                <li>Name and contact details (email address, phone number)</li>
+                                                <li>Business information (company name, industry, website URL)</li>
+                                                <li>Billing and payment information</li>
+                                                <li>Communication history with our team</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-white p-4 rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-primary mb-2"><i
+                                                    class="fas fa-laptop mr-2"></i>Technical Information</h4>
+                                            <ul class="text-gray-600 space-y-2 ml-6 list-disc">
+                                                <li>IP address and browser type</li>
+                                                <li>Device information and operating system</li>
+                                                <li>Pages visited and time spent on our website</li>
+                                                <li>Referral source and exit pages</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-white p-4 rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-primary mb-2"><i
+                                                    class="fas fa-chart-line mr-2"></i>Marketing Data</h4>
+                                            <ul class="text-gray-600 space-y-2 ml-6 list-disc">
+                                                <li>Your marketing preferences and subscriptions</li>
+                                                <li>Response to surveys and feedback forms</li>
+                                                <li>Social media profile information (when provided)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: How We Use Your Information -->
+                    <div id="how-we-use" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">2. How We Use Your Information</h3>
+                                    <p class="text-gray-600 mb-4">We use the collected information for the following
+                                        purposes:</p>
+
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Providing and improving our digital marketing
+                                                services</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Processing transactions and managing
+                                                accounts</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Sending relevant marketing communications</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Responding to inquiries and support
+                                                requests</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Analyzing website usage and performance</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-600">Complying with legal obligations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Information Sharing -->
+                    <div id="information-sharing" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-share-nodes"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">3. Information Sharing and Disclosure</h3>
+                                    <p class="text-gray-600 mb-4">We do not sell your personal information. We may share
+                                        your data only in the following circumstances:</p>
+
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-handshake text-primary mt-1"></i>
+                                            <div>
+                                                <strong class="text-gray-800">Service Providers:</strong>
+                                                <span class="text-gray-600"> With trusted partners who assist in
+                                                    providing our services (e.g., payment processors, hosting providers,
+                                                    analytics tools)</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-balance-scale text-primary mt-1"></i>
+                                            <div>
+                                                <strong class="text-gray-800">Legal Requirements:</strong>
+                                                <span class="text-gray-600"> When required by law or to protect our
+                                                    rights and safety</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-building text-primary mt-1"></i>
+                                            <div>
+                                                <strong class="text-gray-800">Business Transfers:</strong>
+                                                <span class="text-gray-600"> In connection with a merger, acquisition,
+                                                    or sale of business assets</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+                                            <i class="fas fa-thumbs-up text-primary mt-1"></i>
+                                            <div>
+                                                <strong class="text-gray-800">With Your Consent:</strong>
+                                                <span class="text-gray-600"> When you have given explicit permission to
+                                                    share your information</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Data Security -->
+                    <div id="data-security" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">4. Data Security</h3>
+                                    <p class="text-gray-600 mb-4">We implement robust security measures to protect your
+                                        personal information:</p>
+
+                                    <div class="grid sm:grid-cols-3 gap-4">
+                                        <div class="text-center p-6 bg-white rounded-xl border border-gray-100">
+                                            <div
+                                                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                                <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold mb-2">SSL Encryption</h4>
+                                            <p class="text-gray-500 text-sm">All data transmitted is encrypted using
+                                                industry-standard SSL</p>
+                                        </div>
+                                        <div class="text-center p-6 bg-white rounded-xl border border-gray-100">
+                                            <div
+                                                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                                <i class="fas fa-key text-blue-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold mb-2">Access Control</h4>
+                                            <p class="text-gray-500 text-sm">Restricted access to personal data on a
+                                                need-to-know basis</p>
+                                        </div>
+                                        <div class="text-center p-6 bg-white rounded-xl border border-gray-100">
+                                            <div
+                                                class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                                <i class="fas fa-sync-alt text-purple-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold mb-2">Regular Updates</h4>
+                                            <p class="text-gray-500 text-sm">Continuous monitoring and updating of
+                                                security protocols</p>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="text-gray-500 text-sm mt-4 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+                                        <i class="fas fa-info-circle text-yellow-600 mr-2"></i>
+                                        While we strive to protect your personal information, no method of transmission
+                                        over the Internet is 100% secure. We cannot guarantee absolute security.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Cookies -->
+                    <div id="cookies" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-cookie-bite"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">5. Cookies and Tracking Technologies</h3>
+                                    <p class="text-gray-600 mb-4">We use cookies and similar tracking technologies to
+                                        enhance your experience:</p>
+
+                                    <div class="space-y-3">
+                                        <div class="p-4 bg-white rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-gray-800 mb-2">Essential Cookies</h4>
+                                            <p class="text-gray-600 text-sm">Required for the website to function
+                                                properly. Cannot be disabled.</p>
+                                        </div>
+                                        <div class="p-4 bg-white rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-gray-800 mb-2">Analytics Cookies</h4>
+                                            <p class="text-gray-600 text-sm">Help us understand how visitors interact
+                                                with our website (e.g., Google Analytics).</p>
+                                        </div>
+                                        <div class="p-4 bg-white rounded-xl border border-gray-100">
+                                            <h4 class="font-semibold text-gray-800 mb-2">Marketing Cookies</h4>
+                                            <p class="text-gray-600 text-sm">Used to deliver relevant advertisements and
+                                                track campaign performance.</p>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-gray-600 mt-4">You can manage your cookie preferences through your
+                                        browser settings. Note that disabling certain cookies may affect website
+                                        functionality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 6: Your Rights -->
+                    <div id="your-rights" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">6. Your Rights</h3>
+                                    <p class="text-gray-600 mb-4">You have the following rights regarding your personal
+                                        data:</p>
+
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-eye text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Right to Access</h4>
+                                                <p class="text-gray-500 text-sm">Request a copy of your personal data
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-edit text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Right to Rectification</h4>
+                                                <p class="text-gray-500 text-sm">Correct inaccurate or incomplete data
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-trash-alt text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Right to Erasure</h4>
+                                                <p class="text-gray-500 text-sm">Request deletion of your data</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-ban text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Right to Restrict</h4>
+                                                <p class="text-gray-500 text-sm">Limit how we process your data</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-download text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Data Portability</h4>
+                                                <p class="text-gray-500 text-sm">Receive your data in a portable format
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary transition-colors">
+                                            <div
+                                                class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-times-circle text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold">Right to Object</h4>
+                                                <p class="text-gray-500 text-sm">Opt out of marketing communications</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-gray-600 mt-4">To exercise any of these rights, please contact us
+                                        using the information provided below.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 7: Third-Party Links -->
+                    <div id="third-party" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">7. Third-Party Links</h3>
+                                    <p class="text-gray-600">
+                                        Our website may contain links to third-party websites, plugins, and
+                                        applications. Clicking on those links may allow third parties to collect or
+                                        share data about you. We do not control these third-party websites and are not
+                                        responsible for their privacy practices. We encourage you to read the privacy
+                                        policy of every website you visit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 8: Policy Changes -->
+                    <div id="changes" class="scroll-mt-32">
+                        <div class="policy-section">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">8. Changes to This Policy</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        We may update this privacy policy from time to time to reflect changes in our
+                                        practices or for other operational, legal, or regulatory reasons. We will notify
+                                        you of any material changes by:
+                                    </p>
+                                    <ul class="text-gray-600 space-y-2 ml-6 list-disc">
+                                        <li>Posting the new policy on this page</li>
+                                        <li>Updating the "Last Updated" date at the top of this policy</li>
+                                        <li>Sending you an email notification (if you have subscribed to our
+                                            communications)</li>
+                                    </ul>
+                                    <p class="text-gray-600 mt-4">We encourage you to review this policy periodically to
+                                        stay informed about how we protect your information.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 9: Contact Us -->
+                    <div id="contact" class="scroll-mt-32">
+                        <div class="policy-section bg-gradient-to-r from-primary/5 to-primary/10">
+                            <div class="flex items-start gap-4">
+                                <div class="policy-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-4">9. Contact Us</h3>
+                                    <p class="text-gray-600 mb-6">
+                                        If you have any questions about this privacy policy or our data practices,
+                                        please contact us:
+                                    </p>
+
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <a href="mailto:grofastdigital@gmail.com"
+                                            class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary hover:shadow-lg transition-all group">
+                                            <div
+                                                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                                                <i
+                                                    class="fas fa-envelope text-primary group-hover:text-white transition-colors"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Email Us</span>
+                                                <p class="font-semibold text-gray-800">grofastdigital@gmail.com</p>
+                                            </div>
+                                        </a>
+                                        <a href="tel:+919159124541"
+                                            class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary hover:shadow-lg transition-all group">
+                                            <div
+                                                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                                                <i
+                                                    class="fas fa-phone text-primary group-hover:text-white transition-colors"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Call Us</span>
+                                                <p class="font-semibold text-gray-800">+91 9159124541</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-6 p-4 bg-white rounded-xl border border-gray-100">
+                                        <p class="text-gray-600">
+                                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                                            <strong>Address:</strong> Grofast Digital, Tamil Nadu, India
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-hero">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">Have Questions About Your Data?</h2>
+            <p class="text-white/80 text-lg mb-8">Our team is here to help you understand how we protect your privacy
+                and answer any concerns you may have.</p>
+            <a href="contact.html"
+                class="gradient-btn inline-flex items-center gap-2 text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                Contact Our Team <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="index.html" class="flex flex-col mb-5">
+                        <span class="text-2xl font-extrabold tracking-wide">GRO<span
+                                class="text-primary">FAST</span></span>
+                        <span class="text-[10px] text-primary tracking-[3px] uppercase -mt-1">AI Driven Digital</span>
+                    </a>
+                    <p class="text-white/60 mb-6">Transforming businesses through innovative digital solutions and
+                        AI-powered marketing strategies.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-white/60 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-white/60 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="team.html" class="text-white/60 hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-white/60 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="service-digital-marketing.html"
+                                class="text-white/60 hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="service-influencer.html"
+                                class="text-white/60 hover:text-primary transition-colors">Influencer Marketing</a></li>
+                        <li><a href="service-software.html"
+                                class="text-white/60 hover:text-primary transition-colors">Marketing Software</a></li>
+                        <li><a href="service-ai.html" class="text-white/60 hover:text-primary transition-colors">AI
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><a
+                                href="mailto:grofastdigital@gmail.com"
+                                class="text-white/60 hover:text-primary transition-colors">grofastdigital@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><a
+                                href="tel:+919159124541" class="text-white/60 hover:text-primary transition-colors">+91
+                                9159124541</a></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
+                                class="text-white/60">Tamil Nadu, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | <a href="privacy-policy.html"
+                        class="hover:text-primary transition-colors">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to TOC based on scroll position
+        const sections = document.querySelectorAll('[id]');
+        const tocLinks = document.querySelectorAll('.toc-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('bg-red-50', 'border-primary', 'text-primary');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('bg-red-50', 'border-primary', 'text-primary');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

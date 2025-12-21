@@ -228,19 +228,23 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">1000+</span>
+                    <span class="counter block text-4xl md:text-5xl font-extrabold text-primary mb-2" data-target="1000"
+                        data-suffix="+">0</span>
                     <span class="text-white/70 text-lg">Projects Delivered</span>
                 </div>
                 <div class="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">400+</span>
+                    <span class="counter block text-4xl md:text-5xl font-extrabold text-primary mb-2" data-target="400"
+                        data-suffix="+">0</span>
                     <span class="text-white/70 text-lg">Happy Clients</span>
                 </div>
                 <div class="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">₹20 Cr+</span>
+                    <span class="counter block text-4xl md:text-5xl font-extrabold text-primary mb-2" data-target="20"
+                        data-prefix="₹" data-suffix=" Cr+">0</span>
                     <span class="text-white/70 text-lg">Revenue Generated</span>
                 </div>
                 <div class="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                    <span class="block text-4xl md:text-5xl font-extrabold text-primary mb-2">50K+</span>
+                    <span class="counter block text-4xl md:text-5xl font-extrabold text-primary mb-2" data-target="50"
+                        data-suffix="K+">0</span>
                     <span class="text-white/70 text-lg">Leads Generated</span>
                 </div>
             </div>
@@ -390,6 +394,8 @@
                         <li><a href="team.html" class="text-white/60 hover:text-primary transition-colors">Team</a></li>
                         <li><a href="portfolio.html"
                                 class="text-white/60 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-white/60 hover:text-primary transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div>
@@ -408,17 +414,21 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><span
-                                class="text-white/60">grofastdigital@gmail.com</span></li>
-                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><span
-                                class="text-white/60">+91 9159124541</span></li>
+                        <li class="flex items-start gap-4"><i class="fas fa-envelope text-primary mt-1"></i><a
+                                href="mailto:grofastdigital@gmail.com"
+                                class="text-white/60 hover:text-primary transition-colors">grofastdigital@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-4"><i class="fas fa-phone text-primary mt-1"></i><a
+                                href="tel:+919159124541" class="text-white/60 hover:text-primary transition-colors">+91
+                                9159124541</a></li>
                         <li class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span
                                 class="text-white/60">Tamil Nadu, India</span></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
-                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+                <p>&copy; 2025 Grofast Digital. All Rights Reserved. | <a href="privacy-policy.html"
+                        class="hover:text-primary transition-colors">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -426,6 +436,54 @@
     <script>
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    element.textContent = prefix + Math.floor(current) + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = prefix + target + suffix;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Observe stats section
+        const counters = document.querySelectorAll('.counter');
+        let hasAnimated = false;
+
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    counters.forEach(counter => {
+                        animateCounter(counter);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe the first stats card parent section
+        const statsSection = document.querySelector('.counter')?.closest('section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
         }
     </script>
 </body>

@@ -740,7 +740,8 @@
             class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
             <i class="fas fa-cog text-white text-3xl"></i>
           </div>
-          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">5+</span>
+          <span class="counter block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1" data-target="5"
+            data-suffix="+">0</span>
           <span class="text-gray-500 text-sm font-medium">Years in the Industry</span>
         </div>
 
@@ -751,7 +752,8 @@
             class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
             <i class="fas fa-users text-white text-3xl"></i>
           </div>
-          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">400+</span>
+          <span class="counter block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1" data-target="400"
+            data-suffix="+">0</span>
           <span class="text-gray-500 text-sm font-medium">Happy Clients</span>
         </div>
 
@@ -762,7 +764,8 @@
             class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
             <i class="fas fa-bullseye text-white text-3xl"></i>
           </div>
-          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">50K+</span>
+          <span class="counter block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1" data-target="50"
+            data-suffix="K+">0</span>
           <span class="text-gray-500 text-sm font-medium">Leads Generated</span>
         </div>
 
@@ -773,7 +776,8 @@
             class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
             <i class="fas fa-indian-rupee-sign text-white text-3xl"></i>
           </div>
-          <span class="block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1">₹20Cr+</span>
+          <span class="counter block text-3xl md:text-4xl font-extrabold text-gray-800 mb-1" data-target="20"
+            data-prefix="₹" data-suffix="Cr+">0</span>
           <span class="text-gray-500 text-sm font-medium">Revenue Generated</span>
         </div>
       </div>
@@ -1221,6 +1225,8 @@
             <li><a href="team.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">Team</a></li>
             <li><a href="portfolio.html"
                 class="text-white/60 hover:text-primary hover:pl-1 transition-all">Portfolio</a></li>
+            <li><a href="privacy-policy.html" class="text-white/60 hover:text-primary hover:pl-1 transition-all">Privacy
+                Policy</a></li>
           </ul>
         </div>
 
@@ -1245,11 +1251,12 @@
           <ul class="space-y-4">
             <li class="flex items-start gap-4">
               <i class="fas fa-envelope text-primary mt-1"></i>
-              <span class="text-white/60">grofastdigital@gmail.com</span>
+              <a href="mailto:grofastdigital@gmail.com"
+                class="text-white/60 hover:text-primary transition-colors">grofastdigital@gmail.com</a>
             </li>
             <li class="flex items-start gap-4">
               <i class="fas fa-phone text-primary mt-1"></i>
-              <span class="text-white/60">+91 9159124541</span>
+              <a href="tel:+919159124541" class="text-white/60 hover:text-primary transition-colors">+91 9159124541</a>
             </li>
             <li class="flex items-start gap-4">
               <i class="fas fa-map-marker-alt text-primary mt-1"></i>
@@ -1261,7 +1268,8 @@
 
       <!-- Copyright -->
       <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
-        <p>&copy; 2025 Grofast Digital. All Rights Reserved. | Privacy Policy</p>
+        <p>&copy; 2025 Grofast Digital. All Rights Reserved. | <a href="privacy-policy.html"
+            class="hover:text-primary transition-colors">Privacy Policy</a></p>
       </div>
     </div>
   </footer>
@@ -1295,8 +1303,8 @@
     const socialLinks = {
       facebook: 'https://www.facebook.com/profile.php?id=61563493814910',
       instagram: 'https://www.instagram.com/grofast_digital/',
-      linkedin: 'https://linkedin.com/company/grofastdigital',
-      youtube: 'https://youtube.com/@grofastdigital',
+      linkedin: 'https://www.linkedin.com/in/grofast-digital-833741399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      youtube: 'https://youtube.com/@grofastdigital-y4p?si=s4Iqucez9LTaLP52',
       whatsapp: 'https://wa.me/919159124541'
     };
 
@@ -1356,9 +1364,58 @@
         });
       }
     })();
+
+    // Counter Animation
+    function animateCounter(element) {
+      const target = parseInt(element.getAttribute('data-target'));
+      const prefix = element.getAttribute('data-prefix') || '';
+      const suffix = element.getAttribute('data-suffix') || '';
+      const duration = 2000; // 2 seconds
+      const step = target / (duration / 16); // 60fps
+      let current = 0;
+
+      const updateCounter = () => {
+        current += step;
+        if (current < target) {
+          element.textContent = prefix + Math.floor(current) + suffix;
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = prefix + target + suffix;
+        }
+      };
+
+      updateCounter();
+    }
+
+    // Observe stats section
+    const counters = document.querySelectorAll('.counter');
+    let hasAnimated = false;
+
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          counters.forEach(counter => {
+            animateCounter(counter);
+          });
+        }
+      });
+    }, observerOptions);
+
+    // Observe the first stats card parent section
+    const statsSection = document.querySelector('.counter')?.closest('section');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
   </script>
 
   <!-- Popup Form -->
+
   <div id="popupOverlay" class="popup-overlay">
     <div class="popup-container">
       <button class="popup-close" onclick="closePopup()">&times;</button>
